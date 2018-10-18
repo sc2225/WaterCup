@@ -456,6 +456,10 @@
         "source": "/Users/sallychhuon/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/d3852c427075888d41cafb411e50b044/res/drawable-hdpi-v4/abc_btn_check_to_on_mtrl_000.png"
     },
     {
+        "merged": "/Users/sallychhuon/AndroidStudioProjects/WaterCup/app/build/intermediates/res/merged/debug/menu_menu_scrolling.xml.flat",
+        "source": "/Users/sallychhuon/AndroidStudioProjects/WaterCup/app/src/main/res/menu/menu_scrolling.xml"
+    },
+    {
         "merged": "/Users/sallychhuon/AndroidStudioProjects/WaterCup/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_design_ic_visibility.png.flat",
         "source": "/Users/sallychhuon/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/fe972ca4d401a17204cd3a29268ac6ab/res/drawable-xxxhdpi-v4/design_ic_visibility.png"
     },

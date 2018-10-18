@@ -29,10 +29,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         switch(v.getId()) {
             case R.id.sugarCupId:
-                Toast.makeText(this, "Sugar Cup", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, "Sugar Cup", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.waterCupId:
-                Toast.makeText(this, "WaterCup", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, "WaterCup", Toast.LENGTH_SHORT).show();
                 break;
 
         }
