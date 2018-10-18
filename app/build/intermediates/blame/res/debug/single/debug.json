@@ -312,6 +312,10 @@
         "source": "/Users/sallychhuon/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/d3852c427075888d41cafb411e50b044/res/drawable-xxxhdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png"
     },
     {
+        "merged": "/Users/sallychhuon/AndroidStudioProjects/WaterCup/app/build/intermediates/res/merged/debug/drawable_waterglass.png.flat",
+        "source": "/Users/sallychhuon/AndroidStudioProjects/WaterCup/app/src/main/res/drawable/waterglass.png"
+    },
+    {
         "merged": "/Users/sallychhuon/AndroidStudioProjects/WaterCup/app/build/intermediates/res/merged/debug/layout_abc_alert_dialog_material.xml.flat",
         "source": "/Users/sallychhuon/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/d3852c427075888d41cafb411e50b044/res/layout/abc_alert_dialog_material.xml"
     },
@@ -1382,6 +1386,10 @@
     {
         "merged": "/Users/sallychhuon/AndroidStudioProjects/WaterCup/app/build/intermediates/res/merged/debug/drawable-ldrtl-mdpi-v17_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
         "source": "/Users/sallychhuon/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/d3852c427075888d41cafb411e50b044/res/drawable-ldrtl-mdpi-v17/abc_ic_menu_copy_mtrl_am_alpha.png"
+    },
+    {
+        "merged": "/Users/sallychhuon/AndroidStudioProjects/WaterCup/app/build/intermediates/res/merged/debug/drawable_drink.png.flat",
+        "source": "/Users/sallychhuon/AndroidStudioProjects/WaterCup/app/src/main/res/drawable/drink.png"
     },
     {
         "merged": "/Users/sallychhuon/AndroidStudioProjects/WaterCup/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_list_pressed_holo_light.9.png.flat",
