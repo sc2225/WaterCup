@@ -3,6 +3,10 @@
     <color name="colorPrimary">#71cbf4</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+    <color name="bg_color">#CBF3F5</color>
+    <color name="sugar_table">#ED7CF7</color>
+    <color name="water_table">#3DE6FC</color>
     
     
 

@@ -10,10 +10,10 @@
     <Switch
         android:id="@+id/switch1"
         android:layout_width="170dp"
-        android:layout_height="33dp"
+        android:layout_height="0dp"
         android:layout_marginEnd="131dp"
         android:layout_marginStart="83dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="364dp"
         android:checked="false"
         android:splitTrack="false"
         android:switchMinWidth="100dp"
@@ -27,8 +27,20 @@
         android:typeface="normal"
 
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:checked="false" />
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="384dp"
+        android:layout_height="53dp"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </android.support.constraint.ConstraintLayout>
