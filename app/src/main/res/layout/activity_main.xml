@@ -44,4 +44,26 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="93dp"
+        android:layout_height="164dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="124dp"
+        android:contentDescription="Water Button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/waterglass" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="109dp"
+        android:layout_height="111dp"
+        android:layout_marginEnd="45dp"
+        android:layout_marginTop="157dp"
+        android:contentDescription="Sugary Drinks Button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/drink" />
+
 </android.support.constraint.ConstraintLayout>
