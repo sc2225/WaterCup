@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="170dp"
+        android:layout_height="33dp"
+        android:layout_marginEnd="131dp"
+        android:layout_marginStart="83dp"
+        android:layout_marginTop="16dp"
+        android:checked="false"
+        android:splitTrack="false"
+        android:switchMinWidth="100dp"
+        android:switchPadding="10dp"
+
+        android:switchTextAppearance="@style/TextAppearance.AppCompat"
+        android:text="Activity mode"
+        android:textAlignment="center"
+        android:textAppearance="@android:style/TextAppearance.WindowTitle"
+        android:textSize="12sp"
+        android:typeface="normal"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:checked="false" />
+
+</android.support.constraint.ConstraintLayout>
