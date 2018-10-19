@@ -1,5 +1,6 @@
 package csc472.depaul.edu.watercup;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -9,6 +10,9 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
     private ImageView sugarCup;
     private ImageView waterCup;
+    private ImageView alarmIc;
+    private ImageView settingsIc;
+    private ImageView statsIc;
 
 
     @Override
@@ -19,9 +23,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         //initialize cups
         sugarCup = (ImageView) findViewById(R.id.sugarCupId);
         waterCup = (ImageView) findViewById(R.id.waterCupId);
+        alarmIc= (ImageView) findViewById(R.id.alarmIcon);
+        settingsIc = (ImageView) findViewById(R.id.settingsIcon);
+        statsIc = (ImageView) findViewById(R.id.statsIcon);
 
         sugarCup.setOnClickListener(this);
         waterCup.setOnClickListener(this);
+        alarmIc.setOnClickListener(this);
+        settingsIc.setOnClickListener(this);
+        statsIc.setOnClickListener(this);
 
     }
 
@@ -30,9 +40,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch(v.getId()) {
             case R.id.sugarCupId:
                 Toast.makeText(this, "Sugar Cup", Toast.LENGTH_SHORT).show();
+
                 break;
             case R.id.waterCupId:
                 Toast.makeText(this, "WaterCup", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.alarmIcon:
+                Toast.makeText(this, "alarmicon", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(MainActivity.this, Alarms.class);
+                startActivity(intent);
+                break;
+            case R.id.settingsIcon:
+                break;
+            case R.id.statsIcon:
                 break;
 
         }

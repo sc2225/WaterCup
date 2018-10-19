@@ -31,7 +31,7 @@
                 <!--tools:layout_editor_absoluteY="480dp"> -->
 
                 <ImageButton
-                    android:id="@+id/imageButton"
+                    android:id="@+id/alarmIcon"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -39,7 +39,7 @@
                     app:srcCompat="@drawable/clock" />
 
                 <ImageButton
-                    android:id="@+id/imageButton2"
+                    android:id="@+id/statsIcon"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -47,7 +47,7 @@
                     app:srcCompat="@drawable/stats" />
 
                 <ImageButton
-                    android:id="@+id/imageButton3"
+                    android:id="@+id/settingsIcon"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
