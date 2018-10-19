@@ -33,77 +33,87 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:checked="false" />
 
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbar"
+    <include layout="@layout/bottom_nav"/>
+
+    <!--<android.support.v7.widget.Toolbar-->
+        <!--android:id="@+id/toolbar"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="51dp"-->
+        <!--android:background="@color/toolbar_color"-->
+        <!--android:minHeight="?attr/actionBarSize"-->
+        <!--android:theme="?attr/actionBarTheme"-->
+        <!--app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--app:layout_constraintEnd_toEndOf="parent"-->
+        <!--app:layout_constraintHorizontal_bias="0.0"-->
+        <!--app:layout_constraintStart_toStartOf="parent">-->
+
+
+        <!--<LinearLayout-->
+            <!--android:id="@+id/toolbarContainer"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:orientation="horizontal"-->
+            <!--android:weightSum= "3">-->
+            <!--&lt;!&ndash;tools:layout_editor_absoluteX="131dp"&ndash;&gt;-->
+            <!--&lt;!&ndash;tools:layout_editor_absoluteY="480dp"> &ndash;&gt;-->
+
+            <!--<ImageButton-->
+                <!--android:id="@+id/imageButton"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_weight="1"-->
+                <!--android:background="@android:color/transparent"-->
+                <!--app:srcCompat="@drawable/clock" />-->
+
+            <!--<ImageButton-->
+                <!--android:id="@+id/imageButton2"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_weight="1"-->
+                <!--android:background="@android:color/transparent"-->
+                <!--app:srcCompat="@drawable/stats" />-->
+
+            <!--<ImageButton-->
+                <!--android:id="@+id/imageButton3"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:background="@android:color/transparent"-->
+                <!--android:layout_weight="1"-->
+                <!--app:srcCompat="@drawable/profile" />-->
+        <!--</LinearLayout>-->
+
+    <!--</android.support.v7.widget.Toolbar>-->
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="51dp"
-        android:background="@color/toolbar_color"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="111dp"
+        android:layout_marginTop="124dp"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent">
-
-
-        <LinearLayout
-            android:id="@+id/toolbarContainer"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:weightSum= "3">
-            <!--tools:layout_editor_absoluteX="131dp"-->
-            <!--tools:layout_editor_absoluteY="480dp"> -->
-
-            <ImageButton
-                android:id="@+id/imageButton"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@android:color/transparent"
-                app:srcCompat="@drawable/clock" />
-
-            <ImageButton
-                android:id="@+id/imageButton2"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@android:color/transparent"
-                app:srcCompat="@drawable/stats" />
-
-            <ImageButton
-                android:id="@+id/imageButton3"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:background="@android:color/transparent"
-                android:layout_weight="1"
-                app:srcCompat="@drawable/profile" />
-        </LinearLayout>
-
-    </android.support.v7.widget.Toolbar>
-
-    <ImageView
-        android:id="@+id/waterCupId"
-        android:layout_width="93dp"
-        android:layout_height="164dp"
-        android:layout_marginStart="45dp"
-        android:layout_marginTop="124dp"
-        android:contentDescription="Water Button"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/waterglass" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <ImageView
-        android:id="@+id/sugarCupId"
-        android:layout_width="109dp"
-        android:layout_height="111dp"
-        android:layout_marginEnd="45dp"
-        android:layout_marginTop="157dp"
-        android:contentDescription="Sugary Drinks Button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/drink" />
+        <ImageView
+            android:id="@+id/sugarCupId"
+            android:layout_width="109dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:contentDescription="Sugary Drinks Button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/drink" />
 
+        <ImageView
+            android:id="@+id/waterCupId"
+            android:layout_width="106dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:contentDescription="Water Button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/waterglass" />
+    </LinearLayout>
 
 
 </android.support.constraint.ConstraintLayout>

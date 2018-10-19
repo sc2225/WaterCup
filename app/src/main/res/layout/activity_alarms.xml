@@ -6,6 +6,8 @@
     android:layout_height="match_parent"
     tools:context=".Alarms">
 
+    <include layout="@layout/bottom_nav"/>
+
 
 
 
