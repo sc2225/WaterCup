@@ -25,6 +25,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name="csc472.depaul.edu.watercup.Stats" />
+        <activity android:name="csc472.depaul.edu.watercup.Alarms" />
+        <activity android:name="csc472.depaul.edu.watercup.Settings" />
 
         <provider
             android:name="com.android.tools.ir.server.InstantRunContentProvider"
