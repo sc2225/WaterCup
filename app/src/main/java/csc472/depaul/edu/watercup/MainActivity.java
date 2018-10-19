@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         //initialize cups
         sugarCup = (ImageView) findViewById(R.id.sugarCupId);
         waterCup = (ImageView) findViewById(R.id.waterCupId);
-        alarmIc= (ImageView) findViewById(R.id.alarmIcon);
+        alarmIc = (ImageView) findViewById(R.id.alarmIcon);
         settingsIc = (ImageView) findViewById(R.id.settingsIcon);
         statsIc = (ImageView) findViewById(R.id.statsIcon);
 
@@ -46,13 +46,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Toast.makeText(this, "WaterCup", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.alarmIcon:
-                Toast.makeText(this, "alarmicon", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(MainActivity.this, Alarms.class);
-                startActivity(intent);
+                startActivity(new Intent(MainActivity.this, Alarms.class));
                 break;
             case R.id.settingsIcon:
+                startActivity(new Intent(MainActivity.this, Settings.class));
                 break;
             case R.id.statsIcon:
+                startActivity(new Intent(MainActivity.this, Stats.class));
                 break;
 
         }

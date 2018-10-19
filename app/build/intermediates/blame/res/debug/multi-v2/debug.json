@@ -403,22 +403,6 @@
             ]
         },
         {
-            "outputFile": "C:\\AndroidStudioProjects\\WaterCup\\app\\build\\intermediates\\res\\merged\\debug\\values-hdpi-v4_values-hdpi-v4.arsc.flat",
-            "map": [
-                {
-                    "source": "C:\\Users\\Sally\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\8da4817720ea7677ec0ae13eacff0da9\\res\\values-hdpi-v4\\values-hdpi-v4.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endLines": "6",
-                        "endColumns": "13",
-                        "endOffsets": "327"
-                    }
-                }
-            ]
-        },
-        {
             "outputFile": "C:\\AndroidStudioProjects\\WaterCup\\app\\build\\intermediates\\res\\merged\\debug\\values-v25_values-v25.arsc.flat",
             "map": [
                 {
@@ -430,6 +414,22 @@
                         "endLines": "2,3,5,7",
                         "endColumns": "70,82,12,12",
                         "endOffsets": "121,204,303,414"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "C:\\AndroidStudioProjects\\WaterCup\\app\\build\\intermediates\\res\\merged\\debug\\values-hdpi-v4_values-hdpi-v4.arsc.flat",
+            "map": [
+                {
+                    "source": "C:\\Users\\Sally\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\8da4817720ea7677ec0ae13eacff0da9\\res\\values-hdpi-v4\\values-hdpi-v4.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "6",
+                        "endColumns": "13",
+                        "endOffsets": "327"
                     }
                 }
             ]
