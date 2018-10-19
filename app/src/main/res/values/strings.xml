@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">Your Water Cup</string>
+    <string name="stats_name">My Statistics</string>
+    <string name="settings_name">My Profile</string>
+    <string name="alarm_name">My Reminders</string>
 
     <string name="action_settings">Settings</string>
     <string name="title_activity_main2">Main2Activity</string>
