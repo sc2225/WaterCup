@@ -1,10 +1,13 @@
 package csc472.depaul.edu.watercup;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
@@ -13,6 +16,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private ImageView alarmIc;
     private ImageView settingsIc;
     private ImageView statsIc;
+    private ProgressBar progressBar;
+    private TextView dialogString;
+    private int currentConsumption = 0;
 
 
     @Override
@@ -26,6 +32,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         alarmIc = (ImageView) findViewById(R.id.alarmIcon);
         settingsIc = (ImageView) findViewById(R.id.settingsIcon);
         statsIc = (ImageView) findViewById(R.id.statsIcon);
+        progressBar = findViewById(R.id.progressBar);
+        dialogString = findViewById(R.id.DialogString);
 
         sugarCup.setOnClickListener(this);
         waterCup.setOnClickListener(this);
@@ -33,6 +41,25 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         settingsIc.setOnClickListener(this);
         statsIc.setOnClickListener(this);
 
+        setProgressBar();
+        setDialogString();
+    }
+
+    private void setProgressBar() {
+        //get the values for weight and age from sharedprefs
+       SharedPreferences pref = getApplicationContext().getSharedPreferences("MyPref", MODE_PRIVATE);
+       int totalWater = pref.getInt("baseWater", 0);
+       progressBar.setMax(totalWater);
+    }
+
+    private void setDialogString () {
+        SharedPreferences pref = getApplicationContext().getSharedPreferences("MyPref", MODE_PRIVATE);
+        int totalWater = pref.getInt("baseWater", 0);
+        if (currentConsumption < totalWater ) {
+            dialogString.setText("Keep it up! You've only drank " + currentConsumption + "/" + totalWater + " fl. oz");
+        } else {
+            dialogString.setText("You've reached your daily fluid intake! Good Job!");
+        }
     }
 
     @Override
