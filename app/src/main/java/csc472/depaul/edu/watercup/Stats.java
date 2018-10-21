@@ -10,6 +10,7 @@ public class Stats extends AppCompatActivity implements View.OnClickListener {
     private ImageView alarmIc;
     private ImageView settingsIc;
     private ImageView statsIc;
+    private ImageView homeIc;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,10 +19,12 @@ public class Stats extends AppCompatActivity implements View.OnClickListener {
         alarmIc = (ImageView) findViewById(R.id.alarmIcon);
         settingsIc = (ImageView) findViewById(R.id.settingsIcon);
         statsIc = (ImageView) findViewById(R.id.statsIcon);
+        homeIc = findViewById(R.id.homeIcon);
 
         alarmIc.setOnClickListener(this);
         settingsIc.setOnClickListener(this);
         statsIc.setOnClickListener(this);
+        homeIc.setOnClickListener(this);
     }
 
     @Override
@@ -34,6 +37,9 @@ public class Stats extends AppCompatActivity implements View.OnClickListener {
                 startActivity(new Intent(Stats.this, Settings.class));
                 break;
             case R.id.statsIcon:
+                break;
+            case R.id.homeIcon:
+                startActivity(new Intent(Stats.this, MainActivity.class));
                 break;
 
         }

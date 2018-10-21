@@ -17,6 +17,7 @@ public class Settings extends AppCompatActivity implements View.OnClickListener 
     private ImageView alarmIc;
     private ImageView settingsIc;
     private ImageView statsIc;
+    private ImageView homeIc;
     private Button submit;
     private EditText weightInput;
     private TextView weightView;
@@ -40,6 +41,7 @@ public class Settings extends AppCompatActivity implements View.OnClickListener 
         alarmIc= (ImageView) findViewById(R.id.alarmIcon);
         settingsIc = (ImageView) findViewById(R.id.settingsIcon);
         statsIc = (ImageView) findViewById(R.id.statsIcon);
+        homeIc = findViewById(R.id.homeIcon);
         submit = (Button) findViewById(R.id.submit);
         weightView = (TextView) findViewById(R.id.textWeight) ;
         weightInput = (EditText) findViewById(R.id.editText);
@@ -50,6 +52,7 @@ public class Settings extends AppCompatActivity implements View.OnClickListener 
         settingsIc.setOnClickListener(this);
         statsIc.setOnClickListener(this);
         submit.setOnClickListener(this);
+        homeIc.setOnClickListener(this);
 
     }
 
@@ -75,6 +78,9 @@ public class Settings extends AppCompatActivity implements View.OnClickListener 
                 break;
             case R.id.statsIcon:
                 startActivity(new Intent(Settings.this, Stats.class));
+                break;
+            case R.id.homeIcon:
+                startActivity(new Intent(Settings.this, MainActivity.class));
                 break;
             case R.id.submit:
 

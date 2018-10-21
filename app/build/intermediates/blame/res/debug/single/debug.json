@@ -972,6 +972,10 @@
         "source": "C:\\Users\\Sally\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\8da4817720ea7677ec0ae13eacff0da9\\res\\drawable\\abc_btn_borderless_material.xml"
     },
     {
+        "merged": "C:\\AndroidStudioProjects\\WaterCup\\app\\build\\intermediates\\res\\merged\\debug\\drawable_home.png.flat",
+        "source": "C:\\AndroidStudioProjects\\WaterCup\\app\\src\\main\\res\\drawable\\home.png"
+    },
+    {
         "merged": "C:\\AndroidStudioProjects\\WaterCup\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_popup_background_mtrl_mult.9.png.flat",
         "source": "C:\\Users\\Sally\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\8da4817720ea7677ec0ae13eacff0da9\\res\\drawable-xxhdpi-v4\\abc_popup_background_mtrl_mult.9.png"
     },
@@ -1622,6 +1626,10 @@
     {
         "merged": "C:\\AndroidStudioProjects\\WaterCup\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_list_focused_holo.9.png.flat",
         "source": "C:\\Users\\Sally\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\8da4817720ea7677ec0ae13eacff0da9\\res\\drawable-hdpi-v4\\abc_list_focused_holo.9.png"
+    },
+    {
+        "merged": "C:\\AndroidStudioProjects\\WaterCup\\app\\build\\intermediates\\res\\merged\\debug\\drawable_home2.png.flat",
+        "source": "C:\\AndroidStudioProjects\\WaterCup\\app\\src\\main\\res\\drawable\\home2.png"
     },
     {
         "merged": "C:\\AndroidStudioProjects\\WaterCup\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_scrubber_primary_mtrl_alpha.9.png.flat",
