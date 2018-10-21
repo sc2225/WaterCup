@@ -3,7 +3,7 @@ package csc472.depaul.edu.watercup;
 public class SharedData {
 
     private static SharedData instance;
-    private static int weightValue = 0;
+    private static int dailyWater;
 
     private SharedData () {}
 
@@ -15,12 +15,9 @@ public class SharedData {
     }
 
     //getters and setters
-    public static void setWeight (int val) {
-        weightValue = val;
-        System.out.println("Weight is set to " + val);
-    }
-
-    public static int getWeight() {
-        return weightValue;
+    public static int getDailyWater (int weight, int age) {
+        Calculations calc = new Calculations();
+        dailyWater = calc.baseWater(weight, age);
+        return dailyWater;
     }
 }

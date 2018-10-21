@@ -6,9 +6,26 @@
     android:layout_height="match_parent"
     tools:context=".Settings">
 
+    <TextView
+        android:id="@+id/dialogView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="The current amount you must drink daily: "
+        android:textAlignment="center"
+        android:textSize="17dp"
+        app:layout_constraintBottom_toTopOf="@+id/waterView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <android.support.v7.widget.CardView
+        android:id="@+id/cardView"
         android:layout_width="304dp"
-        android:layout_height="318dp"
+        android:layout_height="258dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
@@ -22,32 +39,40 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:gravity="center"
             android:orientation="vertical"
             android:paddingLeft="16dp"
             android:paddingRight="16dp"
-            android:gravity="center"
             tools:layout_editor_absoluteX="114dp"
             tools:layout_editor_absoluteY="257dp">
 
             <TextView
                 android:id="@+id/textWeight"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:layout_height="40dp"
+                android:layout_marginBottom="10dp"
+                android:padding="3dp"
+                android:text="TextView"
+                android:textAlignment="center" />
 
             <EditText
                 android:id="@+id/editText"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginBottom="10dp"
                 android:ems="10"
-                android:hint="Weight"
-                android:inputType="number" />
+                android:hint="Enter weight in pounds(lbs.)"
+                android:inputType="number"
+
+                />
 
             <EditText
-                android:id="@+id/editText2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:id="@+id/editAge"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="10dp"
                 android:ems="10"
+                android:hint="Enter age in years"
                 android:inputType="number"
                 tools:layout_editor_absoluteX="72dp"
                 tools:layout_editor_absoluteY="185dp" />
@@ -56,7 +81,7 @@
                 android:id="@+id/submit"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="0"
+                android:background="@drawable/shapesubmit"
                 android:text="SUBMIT" />
 
         </LinearLayout>
@@ -67,10 +92,23 @@
     <include
         android:id="@+id/include2"
         layout="@layout/bottom_nav"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/waterView"
+        android:layout_width="168dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="10dp"
+        android:textAlignment="center"
+        android:textSize="23dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dialogView" />
 
 
 </android.support.constraint.ConstraintLayout>

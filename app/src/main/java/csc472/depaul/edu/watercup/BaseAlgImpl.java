@@ -16,7 +16,7 @@ public class BaseAlgImpl implements WaterCalculation {
             multiplier = 30;
         }
 
-        double res2 = res1 + multiplier;
+        double res2 = res1 * multiplier;
         int finalres = (int) (res2/28.3);
         return finalres;
 

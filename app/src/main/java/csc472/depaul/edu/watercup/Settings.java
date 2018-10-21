@@ -20,8 +20,10 @@ public class Settings extends AppCompatActivity implements View.OnClickListener 
     private Button submit;
     private EditText weightInput;
     private TextView weightView;
+    private EditText ageInput;
     SharedPreferences.Editor editor;
     SharedPreferences pref;
+    private TextView waterView;
 
 
 
@@ -40,23 +42,26 @@ public class Settings extends AppCompatActivity implements View.OnClickListener 
         statsIc = (ImageView) findViewById(R.id.statsIcon);
         submit = (Button) findViewById(R.id.submit);
         weightView = (TextView) findViewById(R.id.textWeight) ;
-
-
+        weightInput = (EditText) findViewById(R.id.editText);
+        ageInput = (EditText) findViewById(R.id.editAge);
+        waterView = (TextView) findViewById(R.id.waterView);
 
         alarmIc.setOnClickListener(this);
         settingsIc.setOnClickListener(this);
         statsIc.setOnClickListener(this);
         submit.setOnClickListener(this);
+
     }
 
     @Override
     protected void onPostResume() {
         super.onPostResume();
         //if not sharedPreferences for weight not null, populate the text view.
-        if (pref.contains("weight")) {
-            weightView.setText(Integer.toString(pref.getInt("weight", 0)));
+        if (pref.contains("weight") && pref.contains("age")) {
+            weightView.setText("Your weight and age are set as " + Integer.toString(pref.getInt("weight", 0)) + " lbs, " + Integer.toString(pref.getInt("age", 0)) + " years old." );
+            waterView.setText( pref.getInt("baseWater", 0)+ " oz.");
         } else {
-            weightView.setText("Need to set weight");
+            weightView.setText("You have not specified a weight and/or age yet.");
         }
     }
 
@@ -72,21 +77,25 @@ public class Settings extends AppCompatActivity implements View.OnClickListener 
                 startActivity(new Intent(Settings.this, Stats.class));
                 break;
             case R.id.submit:
-                weightInput = (EditText) findViewById(R.id.editText);
 
-                //if null do not set corresponding singleton attribute
-                if (weightInput.getText().toString().isEmpty()) {
-                    System.out.println("Null");
-                    Toast.makeText(this, "Not a valid weight", Toast.LENGTH_SHORT).show();
+                if (weightInput.getText().toString().isEmpty() || ageInput.getText().toString().isEmpty() || Integer.parseInt(weightInput.getText().toString()) == 0 ||  Integer.parseInt(ageInput.getText().toString()) == 0) {
+                    Toast.makeText(this, "Please enter a valid value for age and weight", Toast.LENGTH_SHORT).show();
                 } else {
 
-                    Toast.makeText(this, weightInput.getText().toString(), Toast.LENGTH_SHORT).show();
                    // SharedData.getInstance().setWeight(Integer.parseInt(weightInput.getText().toString()));
                     editor.putInt("weight", Integer.parseInt(weightInput.getText().toString()) );
                     editor.apply();
 
-                    int pageNumber = pref.getInt("weight", 0);
-                    weightView.setText(Integer.toString(pageNumber));
+                    editor.putInt("age", Integer.parseInt(ageInput.getText().toString()) );
+                    editor.apply();
+
+                    int weight = pref.getInt("weight", 0);
+                    int age = pref.getInt("age", 0);
+                    weightView.setText("You have set your weight to " +Integer.toString(weight) + " and age to " + age);
+                    editor.putInt("baseWater", SharedData.getInstance().getDailyWater(weight, age) );
+                    editor.apply();
+                    waterView.setText( pref.getInt("baseWater", 0)+ " oz.");
+
                     break;
                 }
 
