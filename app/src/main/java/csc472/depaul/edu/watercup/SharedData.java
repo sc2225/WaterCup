@@ -20,4 +20,6 @@ public class SharedData {
         dailyWater = calc.baseWater(weight, age);
         return dailyWater;
     }
+
+
 }

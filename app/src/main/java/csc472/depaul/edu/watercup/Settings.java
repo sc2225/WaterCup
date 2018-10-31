@@ -57,8 +57,8 @@ public class Settings extends AppCompatActivity implements View.OnClickListener 
     }
 
     @Override
-    protected void onPostResume() {
-        super.onPostResume();
+    protected void onResume() {
+        super.onResume();
         //if not sharedPreferences for weight not null, populate the text view.
         if (pref.contains("weight") && pref.contains("age")) {
             weightView.setText("Your weight and age are set as " + Integer.toString(pref.getInt("weight", 0)) + " lbs, " + Integer.toString(pref.getInt("age", 0)) + " years old." );
@@ -88,7 +88,6 @@ public class Settings extends AppCompatActivity implements View.OnClickListener 
                     Toast.makeText(this, "Please enter a valid value for age and weight", Toast.LENGTH_SHORT).show();
                 } else {
 
-                   // SharedData.getInstance().setWeight(Integer.parseInt(weightInput.getText().toString()));
                     editor.putInt("weight", Integer.parseInt(weightInput.getText().toString()) );
                     editor.apply();
 
