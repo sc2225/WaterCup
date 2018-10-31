@@ -1,6 +1,6 @@
 #Internal package file, do not edit.
-#Tue Oct 30 16:59:54 CDT 2018
-2.base=/Users/sallychhuon/AndroidStudioProjects/WaterCup/app/build/intermediates/transforms/dexMerger/debug/11
+#Tue Oct 30 23:47:25 CDT 2018
+2.base=/Users/sallychhuon/AndroidStudioProjects/WaterCup/app/build/intermediates/transforms/dexMerger/debug/14
 0.path=classes.dex
 2.baseType=DIRECTORY
 3.base=/Users/sallychhuon/AndroidStudioProjects/WaterCup/app/build/intermediates/assets/debug
@@ -15,9 +15,9 @@ count=5
 1.set=DEX
 4.path=classes.dex
 1.baseType=DIRECTORY
-0.base=/Users/sallychhuon/AndroidStudioProjects/WaterCup/app/build/intermediates/transforms/dexMerger/debug/12
+0.base=/Users/sallychhuon/AndroidStudioProjects/WaterCup/app/build/intermediates/transforms/dexMerger/debug/15
 0.baseType=DIRECTORY
 3.set=ASSET
-1.base=/Users/sallychhuon/AndroidStudioProjects/WaterCup/app/build/intermediates/transforms/dexMerger/debug/14
+1.base=/Users/sallychhuon/AndroidStudioProjects/WaterCup/app/build/intermediates/transforms/dexMerger/debug/12
 4.baseType=DIRECTORY
 0.set=DEX

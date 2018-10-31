@@ -1,36 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
-    <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
-    <!--android:id="@+id/linear"-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:layout_alignBottom="@id/toolbar">-->
 
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="51dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="0dp"
-            android:background="@color/toolbar_color"
-            android:minHeight="?attr/actionBarSize"
-            android:theme="?attr/actionBarTheme">
+<android.support.v7.widget.Toolbar android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="51dp"
+    android:layout_alignParentStart="true"
+    android:layout_alignParentBottom="true"
+    android:layout_marginBottom="0dp"
+    android:background="@color/toolbar_color"
+    android:minHeight="?attr/actionBarSize"
+    android:theme="?attr/actionBarTheme"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
 
             <LinearLayout
                 android:id="@+id/toolbarContainer"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:weightSum="4">
-                <!--tools:layout_editor_absoluteX="131dp"-->
-                <!--tools:layout_editor_absoluteY="480dp"> -->
+
 
                 <ImageButton
                     android:id="@+id/alarmIcon"
@@ -47,7 +41,8 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:layout_marginTop="10dp"
-                    app:srcCompat="@drawable/home2" />
+                    app:srcCompat="@drawable/home2"
+                   />
 
                 <ImageButton
                     android:id="@+id/statsIcon"
@@ -67,6 +62,5 @@
             </LinearLayout>
 
         </android.support.v7.widget.Toolbar>
-    </RelativeLayout>
+</RelativeLayout>
 
-<!--</LinearLayout>-->
