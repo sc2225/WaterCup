@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private TextView dialogString;
     private SugarCounterDialog sugardialog;
     private WaterCounterDialog waterdialog;
+    private TextView weather;
 
 
 /**    For sharedPref, Keys are:
@@ -71,6 +72,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         setProgressBar();
         setDialogString();
+
+
+
+        weather = findViewById(R.id.weather);
+        weather.setText(new Fetch().execute().toString());
+
+
     }
 
     private void setProgressBar() {

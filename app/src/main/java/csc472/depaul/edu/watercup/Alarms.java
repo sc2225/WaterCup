@@ -1,6 +1,9 @@
 package csc472.depaul.edu.watercup;
 
+import android.app.AlarmManager;
+import android.app.PendingIntent;
 import android.content.Intent;
+import android.icu.util.Calendar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -27,6 +30,22 @@ public class Alarms extends AppCompatActivity implements View.OnClickListener {
         settingsIc.setOnClickListener(this);
         statsIc.setOnClickListener(this);
         homeIc.setOnClickListener(this);
+
+//
+//        // get a Calendar object with current time
+//        Calendar cal = Calendar.getInstance();
+//        cal.set(Calendar.HOUR_OF_DAY, 0);
+//        cal.set(Calendar.MINUTE, 57);
+//        cal.set(Calendar.SECOND, 0);
+//        Intent intent = new Intent(Alarms.this, AlarmReciever.class);
+//        intent.putExtra("alarm_message", "O'Doyle Rules!");
+//// In reality, you would want to have a static variable for the request code instead of 192837
+//        PendingIntent sender = PendingIntent.getBroadcast(this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+//
+//// Get the AlarmManager service
+//        AlarmManager am = (AlarmManager) Alarms.this.getSystemService(ALARM_SERVICE);
+//        am.set(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(), sender);
+
     }
 
     @Override
@@ -47,4 +66,5 @@ public class Alarms extends AppCompatActivity implements View.OnClickListener {
 
         }
     }
+
 }

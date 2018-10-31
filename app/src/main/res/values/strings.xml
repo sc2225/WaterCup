@@ -7,6 +7,7 @@
     <string name="action_settings">Settings</string>
     <string name="title_activity_main2">Main2Activity</string>
     <string name="title_home">Home</string>
+    <string name="open_weather_maps_app_id">412e1164d49908e6ecaa1b64520addf4</string>
 
 
 </resources>
