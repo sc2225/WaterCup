@@ -9,5 +9,18 @@
     <string name="title_home">Home</string>
     <string name="open_weather_maps_app_id">412e1164d49908e6ecaa1b64520addf4</string>
 
+    <string name= "cloudy_weather">&#xf013;</string>
+    <string name= "thunder_weather">&#xf01e;</string>
+    <string name="drizzle_weather">&#xf01c;</string>
+    <string name="rainy_weather">&#xf01a;</string>
+    <string name="snowy_weather">&#xf01b;</string>
+    <string name="clear_weather">&#xf00d;</string>
+    <string name="foggy_weather">&#xf014;</string>
+
+
+
+
+
+
 
 </resources>

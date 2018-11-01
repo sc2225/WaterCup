@@ -2674,7 +2674,7 @@ public final class R {
      * <tr><td>barrier</td><td>2</td><td></td></tr>
      * <tr><td>chains</td><td>4</td><td></td></tr>
      * <tr><td>dimensions</td><td>8</td><td></td></tr>
-     * <tr><td>direct</td><td>1</td><td>direct, barriers, chains</td></tr>
+     * <tr><td>direct</td><td>1</td><td></td></tr>
      * <tr><td>groups</td><td>20</td><td></td></tr>
      * <tr><td>none</td><td>0</td><td></td></tr>
      * <tr><td>standard</td><td>7</td><td></td></tr>
@@ -5016,6 +5016,7 @@ public final class R {
     public static final int select_dialog_multichoice_material=0x7f0b0042;
     public static final int select_dialog_singlechoice_material=0x7f0b0043;
     public static final int support_simple_spinner_dropdown_item=0x7f0b0044;
+    public static final int weather_ul=0x7f0b0045;
   }
   public static final class mipmap {
     public static final int ic_launcher=0x7f0c0000;
@@ -5068,22 +5069,29 @@ public final class R {
     public static final int bottom_sheet_behavior=0x7f0d002b;
     public static final int character_counter_content_description=0x7f0d002c;
     public static final int character_counter_pattern=0x7f0d002d;
-    public static final int fab_transformation_scrim_behavior=0x7f0d002e;
-    public static final int fab_transformation_sheet_behavior=0x7f0d002f;
-    public static final int hide_bottom_view_on_scroll_behavior=0x7f0d0030;
-    public static final int mtrl_chip_close_icon_content_description=0x7f0d0031;
-    public static final int open_weather_maps_app_id=0x7f0d0032;
-    public static final int password_toggle_content_description=0x7f0d0033;
-    public static final int path_password_eye=0x7f0d0034;
-    public static final int path_password_eye_mask_strike_through=0x7f0d0035;
-    public static final int path_password_eye_mask_visible=0x7f0d0036;
-    public static final int path_password_strike_through=0x7f0d0037;
-    public static final int search_menu_title=0x7f0d0038;
-    public static final int settings_name=0x7f0d0039;
-    public static final int stats_name=0x7f0d003a;
-    public static final int status_bar_notification_info_overflow=0x7f0d003b;
-    public static final int title_activity_main2=0x7f0d003c;
-    public static final int title_home=0x7f0d003d;
+    public static final int clear_weather=0x7f0d002e;
+    public static final int cloudy_weather=0x7f0d002f;
+    public static final int drizzle_weather=0x7f0d0030;
+    public static final int fab_transformation_scrim_behavior=0x7f0d0031;
+    public static final int fab_transformation_sheet_behavior=0x7f0d0032;
+    public static final int foggy_weather=0x7f0d0033;
+    public static final int hide_bottom_view_on_scroll_behavior=0x7f0d0034;
+    public static final int mtrl_chip_close_icon_content_description=0x7f0d0035;
+    public static final int open_weather_maps_app_id=0x7f0d0036;
+    public static final int password_toggle_content_description=0x7f0d0037;
+    public static final int path_password_eye=0x7f0d0038;
+    public static final int path_password_eye_mask_strike_through=0x7f0d0039;
+    public static final int path_password_eye_mask_visible=0x7f0d003a;
+    public static final int path_password_strike_through=0x7f0d003b;
+    public static final int rainy_weather=0x7f0d003c;
+    public static final int search_menu_title=0x7f0d003d;
+    public static final int settings_name=0x7f0d003e;
+    public static final int snowy_weather=0x7f0d003f;
+    public static final int stats_name=0x7f0d0040;
+    public static final int status_bar_notification_info_overflow=0x7f0d0041;
+    public static final int thunder_weather=0x7f0d0042;
+    public static final int title_activity_main2=0x7f0d0043;
+    public static final int title_home=0x7f0d0044;
   }
   public static final class style {
     public static final int AlertDialog_AppCompat=0x7f0e0000;
@@ -11582,7 +11590,7 @@ public final class R {
      * <tr><td>barrier</td><td>2</td><td></td></tr>
      * <tr><td>chains</td><td>4</td><td></td></tr>
      * <tr><td>dimensions</td><td>8</td><td></td></tr>
-     * <tr><td>direct</td><td>1</td><td>direct, barriers, chains</td></tr>
+     * <tr><td>direct</td><td>1</td><td></td></tr>
      * <tr><td>groups</td><td>20</td><td></td></tr>
      * <tr><td>none</td><td>0</td><td></td></tr>
      * <tr><td>standard</td><td>7</td><td></td></tr>

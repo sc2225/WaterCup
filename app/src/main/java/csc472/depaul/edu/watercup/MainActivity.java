@@ -2,6 +2,7 @@ package csc472.depaul.edu.watercup;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Typeface;
 import android.preference.PreferenceManager;
 import android.support.v4.app.DialogFragment;
 import android.support.v7.app.AppCompatActivity;
@@ -28,6 +29,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private SugarCounterDialog sugardialog;
     private WaterCounterDialog waterdialog;
     private TextView weather;
+    private Typeface weatherFont;
 
 
 /**    For sharedPref, Keys are:
@@ -73,10 +75,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setProgressBar();
         setDialogString();
 
-
-
+        //code to set weather icons
+        weatherFont = Typeface.createFromAsset(getAssets(), "fonts/weather.ttf");
         weather = findViewById(R.id.weather);
-        weather.setText(new Fetch().execute().toString());
+        weather.setText(getString(R.string.clear_weather));
+        weather.setTypeface(weatherFont);
+
+       // weather.setText(new Fetch().execute().toString());
 
 
     }
