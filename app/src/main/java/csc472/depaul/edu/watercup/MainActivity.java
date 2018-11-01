@@ -76,12 +76,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setDialogString();
 
         //code to set weather icons
-        weatherFont = Typeface.createFromAsset(getAssets(), "fonts/weather.ttf");
-        weather = findViewById(R.id.weather);
-        weather.setText(getString(R.string.clear_weather));
-        weather.setTypeface(weatherFont);
+//        weatherFont = Typeface.createFromAsset(getAssets(), "fonts/weather.ttf");
+//        weather = findViewById(R.id.weather);
+//        weather.setText(getString(R.string.clear_weather));
+//        weather.setTypeface(weatherFont);
 
-       // weather.setText(new Fetch().execute().toString());
+        new Fetch().execute();
+        //JSONParser.Parser(f);
 
 
     }
