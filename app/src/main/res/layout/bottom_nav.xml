@@ -7,7 +7,7 @@
 
 <android.support.v7.widget.Toolbar android:id="@+id/toolbar"
     android:layout_width="match_parent"
-    android:layout_height="51dp"
+    android:layout_height="wrap_content"
     android:layout_alignParentStart="true"
     android:layout_alignParentBottom="true"
     android:layout_marginBottom="0dp"
@@ -29,7 +29,7 @@
                 <ImageButton
                     android:id="@+id/alarmIcon"
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="@android:color/transparent"
 
@@ -40,14 +40,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:layout_marginTop="10dp"
                     app:srcCompat="@drawable/home2"
                    />
 
                 <ImageButton
                     android:id="@+id/statsIcon"
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="@android:color/transparent"
                     app:srcCompat="@drawable/stats" />
@@ -55,7 +54,7 @@
                 <ImageButton
                     android:id="@+id/settingsIcon"
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="@android:color/transparent"
                     app:srcCompat="@drawable/profile" />

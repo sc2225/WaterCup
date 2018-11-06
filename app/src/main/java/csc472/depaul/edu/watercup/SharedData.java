@@ -4,6 +4,9 @@ public class SharedData {
 
     private static SharedData instance;
     private static int dailyWater;
+    private static String temp;
+    private static String desc;
+    private static String condition;
 
     private SharedData () {}
 
@@ -21,5 +24,29 @@ public class SharedData {
         return dailyWater;
     }
 
+    public static void setTemp(String temperature) {
+        temp = temperature;
+
+    }
+
+    public static void setDesc(String des) {
+        desc = des;
+    }
+
+    public static void setCondition(String cond) {
+        condition = cond;
+    }
+
+    public static String getTemp() {
+        return  temp;
+    }
+
+    public static String getDesc() {
+        return desc;
+    }
+
+    public static String getCondition() {
+        return condition;
+    }
 
 }

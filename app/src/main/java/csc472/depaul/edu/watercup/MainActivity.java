@@ -3,6 +3,7 @@ package csc472.depaul.edu.watercup;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Typeface;
+import android.os.AsyncTask;
 import android.preference.PreferenceManager;
 import android.support.v4.app.DialogFragment;
 import android.support.v7.app.AppCompatActivity;
@@ -15,8 +16,11 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.json.JSONObject;
+
 import java.util.Calendar;
-import java.util.Date;
+
+
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
     private ImageView sugarCup;
@@ -28,8 +32,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private TextView dialogString;
     private SugarCounterDialog sugardialog;
     private WaterCounterDialog waterdialog;
-    private TextView weather;
-    private Typeface weatherFont;
 
 
 /**    For sharedPref, Keys are:
@@ -37,8 +39,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         baseWater -- total FLUID requirement w/no exercise
         currentSugar -- current sugar
         currentFluidIntake-- current TOTAL intake (sugar + water)
-        pastDate
-        newDate
+        pastdate
+        newdate
+        code -- for weather
+        temp --for weather
+        description --for weather
+        alarmFlag -- if true, alarm registration has been set
  **/
 
 
@@ -50,6 +56,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Log.v("state:", "OnCreate");
 
         resetDailyConsumption();
+        SharedPreferences pref = getApplicationContext().getSharedPreferences("MyPref", MODE_PRIVATE);
 
 //
 //        SharedPreferences pref = getApplicationContext().getSharedPreferences("MyPref", MODE_PRIVATE);
@@ -66,6 +73,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         progressBar = findViewById(R.id.progressBar);
         dialogString = findViewById(R.id.DialogString);
 
+
         sugarCup.setOnClickListener(this);
         waterCup.setOnClickListener(this);
         alarmIc.setOnClickListener(this);
@@ -75,14 +83,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setProgressBar();
         setDialogString();
 
-        //code to set weather icons
-//        weatherFont = Typeface.createFromAsset(getAssets(), "fonts/weather.ttf");
-//        weather = findViewById(R.id.weather);
-//        weather.setText(getString(R.string.clear_weather));
-//        weather.setTypeface(weatherFont);
+        new Fetch(this).execute();
 
-        new Fetch().execute();
-        //JSONParser.Parser(f);
+
 
 
     }
@@ -102,7 +105,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         SharedPreferences pref = getApplicationContext().getSharedPreferences("MyPref", MODE_PRIVATE);
         int totalWater = pref.getInt("baseWater", 0);
 
-        //TODO: change to TOTALFLUIDINTAKE later. Right now its only reflecting water intake, no sugar
+
         int currentFluidIntake = pref.getInt("currentFluidIntake", 0);
 
 
@@ -126,26 +129,46 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         int day = currentTime.get(Calendar.DAY_OF_MONTH);
         int year = currentTime.get(Calendar.YEAR);
 
+        String date = month+"/"+day+"/"+year;
+
+        System.out.println(date);
+
+
         if (!pref.contains("pastdate")) {
 
-            editor.putString("pastdate", month+"/"+day+"/"+year);
+            System.out.println("in condition for past date not in sharedpref");
+
+            editor.putString("pastdate", date);
             editor.apply();
-            editor.putString("newDate", month+"/"+day+"/"+year );
+            editor.putString("newdate", date);
             editor.apply();
         } else {
-            editor.putString("newDate", month+"/"+day+"/"+year );
+
+            System.out.println("in condition for past date in sharedpref");
+            editor.putString("newdate", date);
             editor.apply();
         }
 
         //compare the old and new dates to see if we need to erase the currentWater key-value in sharedpref
-        String olddate = pref.getString("pastDate", "" );
+        String olddate = pref.getString("pastdate", "" );
         String newdate = pref.getString("newdate", "");
+
+        System.out.println("Hellllllooooooooo" + olddate);
+        System.out.println("Hellllllooooooooo" + newdate);
 
         //if strings are the same, ok. if not, erase the value.
         if (!olddate.equals(newdate)) {
+            System.out.println("in condition for comparison");
+
+            editor.putString("pastdate", newdate);
+            editor.apply();
+            editor.putInt("currentFluidIntake", 0);
+            editor.apply();
             editor.putInt("currentWater", 0);
             editor.apply();
-            System.out.println("THIS SHOULD BE NOT HERE");
+            editor.putInt("currentSugar", 0);
+            editor.apply();
+
         }
 
     }
@@ -235,6 +258,67 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     }
 
+    public void updateWeather(String code, String temp, String descrip) {
+
+       /* SharedPreferences pref = getApplicationContext().getSharedPreferences("MyPref", MODE_PRIVATE);
+        SharedPreferences.Editor editor = pref.edit();
+
+        editor.putString("temp", temp);
+        editor.apply();
+        editor.putString("code", code);
+        editor.apply();
+        editor.putString("desrip", descrip);
+        editor.apply();
+        */
+
+
+        TextView weatherDesc = findViewById(R.id.description);
+        weatherDesc.setText(descrip);
+
+        TextView weatherTemp = findViewById(R.id.Temp);
+        weatherTemp.setText(temp);
+
+        getWeatherIcon(code);
+    }
+
+
+    public void getWeatherIcon(String code){
+
+        String icon = "";
+
+        Typeface weatherFont = Typeface.createFromAsset(getAssets(), "fonts/weather.ttf");
+
+        if (code.startsWith("2") ) { //thunder
+            icon = getString(R.string.thunder_weather);
+
+        } else if (code.startsWith("3")) { //drizzle
+
+            icon = getString(R.string.drizzle_weather);
+        } else if (code.startsWith("5")) { //rain
+            icon = getString(R.string.rainy_weather);
+
+        }else if (code.startsWith("6")) {
+            icon = getString(R.string.snowy_weather);
+            //snow
+        } else if (code.startsWith("7")) {
+            icon = getString(R.string.foggy_weather);
+            //foggy
+        } else if (code == "800") {
+            icon = getString(R.string.clear_weather);
+            //clear
+        } else if(code.startsWith("80") ) {
+            icon = getString(R.string.cloudy_weather);
+            //cloudy
+        }
+
+        //code to set weather icons
+        TextView weatherIcon = findViewById(R.id.weatherIcon);
+        weatherIcon.setText(icon);
+        weatherIcon.setTypeface(weatherFont);
+
+    }
+
+
     @Override
     protected void onPause() {
         super.onPause();
@@ -245,17 +329,24 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onStart() {
         super.onStart();
         Log.v("state:", "OnStart");
+
     }
 
     @Override
     protected void onResume() {
         super.onResume();
         Log.v("state:", "OnResume");
+
+
+
     }
 
     @Override
     protected void onStop() {
         super.onStop();
         Log.v("state:", "OnStop");
+
+        Thread.currentThread().interrupt();
+
     }
 }

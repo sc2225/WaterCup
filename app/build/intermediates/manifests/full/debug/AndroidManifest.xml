@@ -9,17 +9,21 @@
         android:targetSdkVersion="28" />
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
         android:allowBackup="true"
         android:appComponentFactory="android.support.v4.app.CoreComponentFactory"
         android:debuggable="true"
         android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
-        <receiver android:name="csc472.depaul.edu.watercup.AlarmReciever" />
+        <receiver
+            android:name="csc472.depaul.edu.watercup.AlarmReciever"
+            android:process=":remote" />
 
         <activity
             android:name="csc472.depaul.edu.watercup.MainActivity"
@@ -32,7 +36,9 @@
         </activity>
         <activity
             android:name="csc472.depaul.edu.watercup.Stats"
-            android:label="@string/stats_name" />
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/stats_name"
+            android:screenOrientation="portrait" />
         <activity
             android:name="csc472.depaul.edu.watercup.Alarms"
             android:label="@string/alarm_name" />
