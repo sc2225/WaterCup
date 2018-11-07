@@ -53,7 +53,12 @@ public class JSONParser {
                 public void run() {
                     Log.v("run", Thread.currentThread().toString());
 
+                    if (code == null || temp == null|| desc == null ) {
+                        temp = "N/A";
+                        desc = "Unable to fetch weather data at this time";
+                        code = "00";
 
+                    }
 
                     activity.updateWeather(code, temp, desc );
 

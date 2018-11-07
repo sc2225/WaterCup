@@ -136,7 +136,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         if (!pref.contains("pastdate")) {
 
-            System.out.println("in condition for past date not in sharedpref");
 
             editor.putString("pastdate", date);
             editor.apply();
@@ -144,7 +143,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             editor.apply();
         } else {
 
-            System.out.println("in condition for past date in sharedpref");
             editor.putString("newdate", date);
             editor.apply();
         }
@@ -153,8 +151,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         String olddate = pref.getString("pastdate", "" );
         String newdate = pref.getString("newdate", "");
 
-        System.out.println("Hellllllooooooooo" + olddate);
-        System.out.println("Hellllllooooooooo" + newdate);
 
         //if strings are the same, ok. if not, erase the value.
         if (!olddate.equals(newdate)) {
@@ -309,13 +305,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         } else if(code.startsWith("80") ) {
             icon = getString(R.string.cloudy_weather);
             //cloudy
+        } else {
+            icon = "N/A";
         }
 
         //code to set weather icons
-        TextView weatherIcon = findViewById(R.id.weatherIcon);
-        weatherIcon.setText(icon);
-        weatherIcon.setTypeface(weatherFont);
-
+        if (!icon.equals("N/A")) {
+            TextView weatherIcon = findViewById(R.id.weatherIcon);
+            weatherIcon.setText(icon);
+            weatherIcon.setTypeface(weatherFont);
+        }
     }
 
 

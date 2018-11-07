@@ -17,6 +17,9 @@
     <string name="clear_weather">&#xf00d;</string>
     <string name="foggy_weather">&#xf014;</string>
 
+
+    <string name="home_icon">&#xf015;</string>
+
     <string name="settingTitle">Configure Reminders</string>
 
 
