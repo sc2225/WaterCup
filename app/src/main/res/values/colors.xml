@@ -6,6 +6,7 @@
     <color name="colorSecondary">#7c4dff</color>
     <color name="colorSecondaryDark">#3f1dcb</color>
     <color name="colorSecondaryLight">#b47cff</color>
+    <color name="transparent">#00000000</color>
 
     <color name="bg_color">#fafafa</color>
     <color name="sugar_table">#ED7CF7</color>

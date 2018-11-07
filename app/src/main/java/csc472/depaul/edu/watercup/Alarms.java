@@ -61,7 +61,7 @@ public class Alarms extends AppCompatActivity implements View.OnClickListener {
 
     private void setAlarm() {
         Calendar calendar = Calendar.getInstance();
-        calendar.set(Calendar.HOUR_OF_DAY, 20);
+        calendar.set(Calendar.HOUR_OF_DAY, 06);
         calendar.set(Calendar.MINUTE, 11);
         calendar.set(Calendar.SECOND, 0);
         Intent intent1 = new Intent(Alarms.this, AlarmReciever.class);

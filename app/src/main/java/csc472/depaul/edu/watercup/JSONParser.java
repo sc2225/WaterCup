@@ -53,11 +53,17 @@ public class JSONParser {
                 public void run() {
                     Log.v("run", Thread.currentThread().toString());
 
+                    System.out.println("This is temp: " + temp + " this is desc: " + desc + " this is code: " + code);
+
                     if (code == null || temp == null|| desc == null ) {
                         temp = "N/A";
                         desc = "Unable to fetch weather data at this time";
                         code = "00";
 
+                    }
+
+                    if (activity==null)  {
+                        System.out.println("ACTIVITY IS NULLLLL");
                     }
 
                     activity.updateWeather(code, temp, desc );
@@ -88,6 +94,7 @@ public class JSONParser {
     }
 
     public static void setActivity(MainActivity act) {
+        activity = new MainActivity();
         activity = act;
     }
 

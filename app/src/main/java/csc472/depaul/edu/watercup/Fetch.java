@@ -26,6 +26,9 @@ public class Fetch extends AsyncTask<Void, Void, Void> {
     private MainActivity activity;
 
     public Fetch(MainActivity act) {
+
+        activity = new MainActivity();
+
         activity = act;
     }
 

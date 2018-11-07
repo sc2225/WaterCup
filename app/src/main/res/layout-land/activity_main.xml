@@ -1,81 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/base"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
-    app:layout_constraintTop_toBottomOf="parent">
+    app:layout_constraintTop_toTopOf="parent">
 
     <ScrollView
         android:id="@+id/scroll"
+        android:paddingTop="?attr/actionBarSize"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginBottom="8dp"
-        android:fillViewport="true"
-        android:paddingBottom="?attr/actionBarSize"
-
+        android:layout_height="wrap_content"
+        android:paddingBottom="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/nav_bar"
         >
 
         <LinearLayout
             android:id="@+id/mainLinear"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical"
             android:weightSum="1">
 
             <LinearLayout
                 android:id="@+id/linearLayout"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight=".30"
-                android:orientation="horizontal"
-                android:weightSum="2"
-
-                >
+                android:layout_height="wrap_content"
+                android:layout_weight=".4"
+                android:weightSum= "2"
+                android:orientation="horizontal">
 
                 <ImageView
 
                     android:id="@+id/sugarCupId"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_margin="4dp"
                     android:layout_weight="1"
                     android:background="@drawable/sugarcup_button"
                     android:contentDescription="@string/sugarcup_descrip"
                     android:padding="30dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
                     app:srcCompat="@drawable/drink" />
 
                 <ImageView
                     android:id="@+id/waterCupId"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_margin="4dp"
                     android:layout_weight="1"
                     android:background="@drawable/watercup_button"
                     android:contentDescription="@string/watercup_descrip"
                     android:padding="30dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
                     app:srcCompat="@drawable/waterglass" />
             </LinearLayout>
 
             <include
                 layout="@layout/weather_ul"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight=".30" />
+                android:layout_height="wrap_content"
+                android:layout_weight=".2" />
 
 
             <LinearLayout
-                android:id="@+id/BottomLay"
+                android:id="@+id/mainLay"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight=".40"
+                android:layout_height="wrap_content"
+                android:layout_weight=".4"
                 android:background="@drawable/main_bottom_lay"
                 android:color="@color/colorSecondaryLight"
                 android:gravity="center"
                 android:orientation="vertical"
-                android:paddingBottom="60dp"
-                android:weightSum="2">
+
+                android:paddingBottom="60dp">
 
 
                 <TextView
@@ -84,7 +85,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:padding="15dp"
                     android:text="Keep it up!"
                     android:textAlignment="center"
                     android:textSize="19sp" />
@@ -95,7 +95,6 @@
                     android:layout_width="250dp"
                     android:layout_height="18dp"
                     android:layout_marginTop="8dp"
-
                     android:progressDrawable="@drawable/progress_bar" />
 
 
@@ -103,18 +102,14 @@
         </LinearLayout>
     </ScrollView>
 
-
     <include
         android:id="@+id/nav_bar"
         layout="@layout/bottom_nav"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="59dp"
         app:layout_constraintBottom_toBottomOf="@id/base"
 
         />
 
 
-
 </android.support.constraint.ConstraintLayout>
-
-    <!--app:layout_constraintBottom_toTopOf="@+id/nav_bar"-->

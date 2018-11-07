@@ -3,8 +3,10 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/base"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
 
     <TextView
         android:id="@+id/dialogView"
@@ -17,10 +19,7 @@
         android:text="The current amount you must drink daily: "
         android:textAlignment="center"
         android:textSize="17dp"
-        app:layout_constraintBottom_toTopOf="@+id/waterView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+         />
 
     <android.support.v7.widget.CardView
         android:id="@+id/cardView"
@@ -30,10 +29,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        >
 
 
         <LinearLayout
@@ -89,12 +85,6 @@
 
     </android.support.v7.widget.CardView>
 
-    <include
-        android:id="@+id/include2"
-        layout="@layout/bottom_nav"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/waterView"
@@ -109,6 +99,13 @@
         app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/dialogView" />
+
+    <include
+        android:id="@+id/nav_bar"
+        layout="@layout/bottom_nav"
+        app:layout_constraintBottom_toBottomOf="@id/base"
+
+        />
 
 
 </android.support.constraint.ConstraintLayout>

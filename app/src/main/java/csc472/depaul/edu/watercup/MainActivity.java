@@ -9,6 +9,7 @@ import android.support.v4.app.DialogFragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.NumberPicker;
@@ -34,7 +35,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private WaterCounterDialog waterdialog;
 
 
-/**    For sharedPref, Keys are:
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.toolbar, menu);
+        return true;
+    }
+
+    /**    For sharedPref, Keys are:
         currentWater -- current water intake
         baseWater -- total FLUID requirement w/no exercise
         currentSugar -- current sugar
@@ -58,12 +65,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         resetDailyConsumption();
         SharedPreferences pref = getApplicationContext().getSharedPreferences("MyPref", MODE_PRIVATE);
 
-//
-//        SharedPreferences pref = getApplicationContext().getSharedPreferences("MyPref", MODE_PRIVATE);
-//        SharedPreferences.Editor editer = pref.edit();
-//        editer.clear();
-//        editer.apply();
-
         //initialize cups
         sugarCup = (ImageView) findViewById(R.id.sugarCupId);
         waterCup = (ImageView) findViewById(R.id.waterCupId);
@@ -82,8 +83,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         setProgressBar();
         setDialogString();
+        JSONParser.setActivity(this);
 
-        new Fetch(this).execute();
+        new Fetch(MainActivity.this).execute();
 
 
 
