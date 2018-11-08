@@ -62,7 +62,7 @@ public class Settings extends AppCompatActivity implements View.OnClickListener 
         //if not sharedPreferences for weight not null, populate the text view.
         if (pref.contains("weight") && pref.contains("age")) {
             weightView.setText("Your weight and age are set as " + Integer.toString(pref.getInt("weight", 0)) + " lbs, " + Integer.toString(pref.getInt("age", 0)) + " years old." );
-            waterView.setText( pref.getInt("baseWater", 0)+ " oz.");
+            waterView.setText( "You need to drink " + pref.getInt("baseWater", 0)+ " fl. oz.");
         } else {
             weightView.setText("You have not specified a weight and/or age yet.");
         }
