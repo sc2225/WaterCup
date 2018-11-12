@@ -4,24 +4,55 @@
     android:id="@+id/base"
     android:background="@drawable/gradient_bg"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    >
 
+    <TextView
+        android:id="@+id/logo"
+        android:textColor="@color/colorPrimaryLight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:layout_above="@id/mainLinear"
+        android:textSize="52sp"
+
+        />
 
     <LinearLayout
-        android:id="@+id/cardView"
+        android:id="@+id/mainLinear"
         android:orientation="vertical"
         android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:layout_margin="25dp"
+        android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
         android:layout_centerInParent="true"
         android:gravity="center">
 
+
+        <TextView
+            android:id="@+id/waterView"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_marginBottom="4dp"
+            android:autoSizeMaxTextSize="21sp"
+            android:autoSizeMinTextSize="14sp"
+            android:autoSizeStepGranularity="2sp"
+            android:autoSizeTextType="uniform"
+            android:fontFamily="serif"
+            android:textAlignment="center"
+            android:textStyle="bold" />
+
         <EditText
             android:id="@+id/editText"
+            android:background="@drawable/shape_input"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="5dp"
-            android:ems="10"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:layout_marginBottom="15dp"
+            android:padding="15dp"
+            android:ems="12"
             android:hint="Enter weight in pounds(lbs.)"
             android:inputType="number" />
 
@@ -29,8 +60,12 @@
             android:id="@+id/editAge"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:ems="10"
+            android:background="@drawable/shape_input"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:layout_marginBottom="15dp"
+            android:padding="15dp"
+            android:ems="12"
             android:hint="Enter age in years"
             android:inputType="number"
             />
@@ -40,38 +75,25 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/shapesubmit"
-            android:text="SUBMIT" />
+            android:fontFamily="sans-serif"
+            android:text="@string/submit_button" />
+
         <TextView
             android:id="@+id/textWeight"
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:layout_marginBottom="10dp"
-            android:padding="3dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:autoSizeTextType="uniform"
-            android:autoSizeMinTextSize="12sp"
-            android:autoSizeMaxTextSize="15sp"
-            android:autoSizeStepGranularity="2sp"
+            android:autoSizeMinTextSize="11sp"
+            android:autoSizeMaxTextSize="16sp"
+            android:autoSizeStepGranularity="1sp"
             android:text="TextView"
             android:layout_gravity="center"
             android:textAlignment="center" />
-        <TextView
-            android:id="@+id/waterView"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:textSize="20sp"
-            android:textAlignment="center"
-            android:autoSizeTextType="uniform"
-            android:autoSizeMaxTextSize="24sp"
-            android:autoSizeMinTextSize="14sp"
-            android:autoSizeStepGranularity="2sp"
-
-            />
 
 
 
 
     </LinearLayout>
-
 
 
 

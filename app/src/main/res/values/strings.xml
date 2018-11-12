@@ -16,6 +16,8 @@
     <string name="snowy_weather">&#xf01b;</string>
     <string name="clear_weather">&#xf00d;</string>
     <string name="foggy_weather">&#xf014;</string>
+    <string name="submit_button">SUBMIT</string>
+    <string name="waterdrop">&#xf043;</string>
     <string name="sugarcup_descrip">Sugar cup button</string>
     <string name = "watercup_descrip">Water cup button</string>
 
@@ -23,9 +25,7 @@
     <string name="weather_icon_default">N/A</string>
     <string name="weather_desc_default">Unable to fetch weather data at this time</string>
 
-
     <string name="home_icon">&#xf015;</string>
-
     <string name="settingTitle">Configure Reminders</string>
 
 

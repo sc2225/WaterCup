@@ -52,6 +52,8 @@ public class Stats extends AppCompatActivity implements View.OnClickListener {
         data.add(new ValueDataEntry("Sugar Intake", sugarIntake));
         data.add(new ValueDataEntry("Water Intake", waterIntake));
 
+
+
         pie.data(data);
         pie.title("Sugar vs Water Consumption (fl. oz.)");
         pie.labels().position("outside");
@@ -59,6 +61,8 @@ public class Stats extends AppCompatActivity implements View.OnClickListener {
                 .position("center-bottom")
                 .itemsLayout(LegendLayout.HORIZONTAL)
                 .align(Align.CENTER);
+
+
 
         AnyChartView anyChartView =  (AnyChartView)findViewById(R.id.any_chart_view);
         anyChartView.setChart(pie);

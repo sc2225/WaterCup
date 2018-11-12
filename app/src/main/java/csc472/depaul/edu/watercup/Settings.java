@@ -3,6 +3,7 @@ package csc472.depaul.edu.watercup;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -25,6 +26,7 @@ public class Settings extends AppCompatActivity implements View.OnClickListener 
     SharedPreferences.Editor editor;
     SharedPreferences pref;
     private TextView waterView;
+    private TextView logo;
 
 
 
@@ -47,12 +49,20 @@ public class Settings extends AppCompatActivity implements View.OnClickListener 
         weightInput = (EditText) findViewById(R.id.editText);
         ageInput = (EditText) findViewById(R.id.editAge);
         waterView = (TextView) findViewById(R.id.waterView);
+        logo = findViewById(R.id.logo);
+
 
         alarmIc.setOnClickListener(this);
         settingsIc.setOnClickListener(this);
         statsIc.setOnClickListener(this);
         submit.setOnClickListener(this);
         homeIc.setOnClickListener(this);
+
+        //set the main logo
+        Typeface weatherFont = Typeface.createFromAsset(getAssets(), "fonts/fontawesome-webfont.ttf");
+        logo.setText(getString(R.string.waterdrop));
+        logo.setTypeface(weatherFont);
+
 
     }
 
@@ -61,7 +71,7 @@ public class Settings extends AppCompatActivity implements View.OnClickListener 
         super.onResume();
         //if not sharedPreferences for weight not null, populate the text view.
         if (pref.contains("weight") && pref.contains("age")) {
-            weightView.setText("Your weight and age are set as " + Integer.toString(pref.getInt("weight", 0)) + " lbs, " + Integer.toString(pref.getInt("age", 0)) + " years old." );
+            weightView.setText("weight and age set as " + Integer.toString(pref.getInt("weight", 0)) + " lbs, " + Integer.toString(pref.getInt("age", 0)) + " years old." );
             waterView.setText( "You need to drink " + pref.getInt("baseWater", 0)+ " fl. oz.");
         } else {
             weightView.setText("You have not specified a weight and/or age yet.");
@@ -99,7 +109,7 @@ public class Settings extends AppCompatActivity implements View.OnClickListener 
                     weightView.setText("You have set your weight to " +Integer.toString(weight) + " and age to " + age);
                     editor.putInt("baseWater", SharedData.getInstance().getDailyWater(weight, age) );
                     editor.apply();
-                    waterView.setText( pref.getInt("baseWater", 0)+ " oz.");
+                    waterView.setText("Daily Requirement:"+ pref.getInt("baseWater", 0)+ "fl. oz.");
 
                     break;
                 }

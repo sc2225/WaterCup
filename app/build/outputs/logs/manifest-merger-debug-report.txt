@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/sallychhuon/AndroidStudioProjects/WaterCup/app/src/main/AndroidManifest.xml:2:1-43:12
-INJECTED from /Users/sallychhuon/AndroidStudioProjects/WaterCup/app/src/main/AndroidManifest.xml:2:1-43:12
-INJECTED from /Users/sallychhuon/AndroidStudioProjects/WaterCup/app/src/main/AndroidManifest.xml:2:1-43:12
-INJECTED from /Users/sallychhuon/AndroidStudioProjects/WaterCup/app/src/main/AndroidManifest.xml:2:1-43:12
+ADDED from /Users/sallychhuon/AndroidStudioProjects/WaterCup/app/src/main/AndroidManifest.xml:2:1-45:12
+INJECTED from /Users/sallychhuon/AndroidStudioProjects/WaterCup/app/src/main/AndroidManifest.xml:2:1-45:12
+INJECTED from /Users/sallychhuon/AndroidStudioProjects/WaterCup/app/src/main/AndroidManifest.xml:2:1-45:12
+INJECTED from /Users/sallychhuon/AndroidStudioProjects/WaterCup/app/src/main/AndroidManifest.xml:2:1-45:12
 MERGED from [com.github.delight-im:Android-SimpleLocation:v1.0.1] /Users/sallychhuon/.gradle/caches/transforms-1/files-1.1/Android-SimpleLocation-v1.0.1.aar/80e184e30a6bba20e1f72ba239daa861/AndroidManifest.xml:2:1-11:12
 MERGED from [com.android.support:design:28.0.0] /Users/sallychhuon/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/fe972ca4d401a17204cd3a29268ac6ab/AndroidManifest.xml:17:1-24:12
 MERGED from [com.github.AnyChart:AnyChart-Android:1.0.5] /Users/sallychhuon/.gradle/caches/transforms-1/files-1.1/AnyChart-Android-1.0.5.aar/60537509b18d7376b6921faef47522d1/AndroidManifest.xml:2:1-17:12
@@ -39,20 +39,20 @@ MERGED from [com.android.support:interpolator:28.0.0] /Users/sallychhuon/.gradle
 MERGED from [android.arch.lifecycle:livedata:1.1.1] /Users/sallychhuon/.gradle/caches/transforms-1/files-1.1/livedata-1.1.1.aar/58f839419e30a9d0844948bbc545cd9a/AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /Users/sallychhuon/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/0cf094ba986514c46864393f63ac109f/AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.core:runtime:1.1.1] /Users/sallychhuon/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/57dff3dacdecda98d72f2688e417d4b2/AndroidManifest.xml:17:1-22:12
-INJECTED from /Users/sallychhuon/AndroidStudioProjects/WaterCup/app/src/main/AndroidManifest.xml:2:1-43:12
-INJECTED from /Users/sallychhuon/AndroidStudioProjects/WaterCup/app/src/main/AndroidManifest.xml:2:1-43:12
-INJECTED from /Users/sallychhuon/AndroidStudioProjects/WaterCup/app/src/main/AndroidManifest.xml:2:1-43:12
+INJECTED from /Users/sallychhuon/AndroidStudioProjects/WaterCup/app/src/main/AndroidManifest.xml:2:1-45:12
+INJECTED from /Users/sallychhuon/AndroidStudioProjects/WaterCup/app/src/main/AndroidManifest.xml:2:1-45:12
+INJECTED from /Users/sallychhuon/AndroidStudioProjects/WaterCup/app/src/main/AndroidManifest.xml:2:1-45:12
 	package
 		ADDED from /Users/sallychhuon/AndroidStudioProjects/WaterCup/app/src/main/AndroidManifest.xml:3:5-41
 		INJECTED from /Users/sallychhuon/AndroidStudioProjects/WaterCup/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/sallychhuon/AndroidStudioProjects/WaterCup/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /Users/sallychhuon/AndroidStudioProjects/WaterCup/app/src/main/AndroidManifest.xml
-		ADDED from /Users/sallychhuon/AndroidStudioProjects/WaterCup/app/src/main/AndroidManifest.xml:2:1-43:12
+		ADDED from /Users/sallychhuon/AndroidStudioProjects/WaterCup/app/src/main/AndroidManifest.xml:2:1-45:12
 		INJECTED from /Users/sallychhuon/AndroidStudioProjects/WaterCup/app/src/main/AndroidManifest.xml
 	android:versionCode
 		INJECTED from /Users/sallychhuon/AndroidStudioProjects/WaterCup/app/src/main/AndroidManifest.xml
-		ADDED from /Users/sallychhuon/AndroidStudioProjects/WaterCup/app/src/main/AndroidManifest.xml:2:1-43:12
+		ADDED from /Users/sallychhuon/AndroidStudioProjects/WaterCup/app/src/main/AndroidManifest.xml:2:1-45:12
 		INJECTED from /Users/sallychhuon/AndroidStudioProjects/WaterCup/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /Users/sallychhuon/AndroidStudioProjects/WaterCup/app/src/main/AndroidManifest.xml:2:11-69
@@ -64,8 +64,12 @@ uses-permission#android.permission.ACCESS_FINE_LOCATION
 ADDED from /Users/sallychhuon/AndroidStudioProjects/WaterCup/app/src/main/AndroidManifest.xml:6:5-79
 	android:name
 		ADDED from /Users/sallychhuon/AndroidStudioProjects/WaterCup/app/src/main/AndroidManifest.xml:6:22-76
+uses-permission#android.permission.WAKE_LOCK
+ADDED from /Users/sallychhuon/AndroidStudioProjects/WaterCup/app/src/main/AndroidManifest.xml:7:5-67
+	android:name
+		ADDED from /Users/sallychhuon/AndroidStudioProjects/WaterCup/app/src/main/AndroidManifest.xml:7:22-65
 application
-ADDED from /Users/sallychhuon/AndroidStudioProjects/WaterCup/app/src/main/AndroidManifest.xml:8:5-41:19
+ADDED from /Users/sallychhuon/AndroidStudioProjects/WaterCup/app/src/main/AndroidManifest.xml:9:5-43:19
 MERGED from [com.github.delight-im:Android-SimpleLocation:v1.0.1] /Users/sallychhuon/.gradle/caches/transforms-1/files-1.1/Android-SimpleLocation-v1.0.1.aar/80e184e30a6bba20e1f72ba239daa861/AndroidManifest.xml:9:5-20
 MERGED from [com.github.delight-im:Android-SimpleLocation:v1.0.1] /Users/sallychhuon/.gradle/caches/transforms-1/files-1.1/Android-SimpleLocation-v1.0.1.aar/80e184e30a6bba20e1f72ba239daa861/AndroidManifest.xml:9:5-20
 MERGED from [com.android.support:design:28.0.0] /Users/sallychhuon/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/fe972ca4d401a17204cd3a29268ac6ab/AndroidManifest.xml:22:5-20
@@ -83,61 +87,61 @@ MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/sallychhuon/
 	android:label
 		ADDED from [com.github.AnyChart:AnyChart-Android:1.0.5] /Users/sallychhuon/.gradle/caches/transforms-1/files-1.1/AnyChart-Android-1.0.5.aar/60537509b18d7376b6921faef47522d1/AndroidManifest.xml:13:9-41
 	android:supportsRtl
-		ADDED from /Users/sallychhuon/AndroidStudioProjects/WaterCup/app/src/main/AndroidManifest.xml:12:9-35
+		ADDED from /Users/sallychhuon/AndroidStudioProjects/WaterCup/app/src/main/AndroidManifest.xml:13:9-35
 	android:roundIcon
-		ADDED from /Users/sallychhuon/AndroidStudioProjects/WaterCup/app/src/main/AndroidManifest.xml:11:9-54
+		ADDED from /Users/sallychhuon/AndroidStudioProjects/WaterCup/app/src/main/AndroidManifest.xml:12:9-54
 	android:icon
-		ADDED from /Users/sallychhuon/AndroidStudioProjects/WaterCup/app/src/main/AndroidManifest.xml:10:9-43
+		ADDED from /Users/sallychhuon/AndroidStudioProjects/WaterCup/app/src/main/AndroidManifest.xml:11:9-43
 	android:allowBackup
-		ADDED from /Users/sallychhuon/AndroidStudioProjects/WaterCup/app/src/main/AndroidManifest.xml:9:9-35
+		ADDED from /Users/sallychhuon/AndroidStudioProjects/WaterCup/app/src/main/AndroidManifest.xml:10:9-35
 	android:theme
-		ADDED from /Users/sallychhuon/AndroidStudioProjects/WaterCup/app/src/main/AndroidManifest.xml:13:9-40
+		ADDED from /Users/sallychhuon/AndroidStudioProjects/WaterCup/app/src/main/AndroidManifest.xml:14:9-40
 receiver#csc472.depaul.edu.watercup.AlarmReciever
-ADDED from /Users/sallychhuon/AndroidStudioProjects/WaterCup/app/src/main/AndroidManifest.xml:15:9-16:42
+ADDED from /Users/sallychhuon/AndroidStudioProjects/WaterCup/app/src/main/AndroidManifest.xml:16:9-17:42
 	android:process
-		ADDED from /Users/sallychhuon/AndroidStudioProjects/WaterCup/app/src/main/AndroidManifest.xml:16:13-38
+		ADDED from /Users/sallychhuon/AndroidStudioProjects/WaterCup/app/src/main/AndroidManifest.xml:17:13-38
 	android:name
-		ADDED from /Users/sallychhuon/AndroidStudioProjects/WaterCup/app/src/main/AndroidManifest.xml:15:19-48
+		ADDED from /Users/sallychhuon/AndroidStudioProjects/WaterCup/app/src/main/AndroidManifest.xml:16:19-48
 activity#csc472.depaul.edu.watercup.MainActivity
-ADDED from /Users/sallychhuon/AndroidStudioProjects/WaterCup/app/src/main/AndroidManifest.xml:19:9-28:20
+ADDED from /Users/sallychhuon/AndroidStudioProjects/WaterCup/app/src/main/AndroidManifest.xml:20:9-29:20
 	android:screenOrientation
-		ADDED from /Users/sallychhuon/AndroidStudioProjects/WaterCup/app/src/main/AndroidManifest.xml:21:13-49
+		ADDED from /Users/sallychhuon/AndroidStudioProjects/WaterCup/app/src/main/AndroidManifest.xml:22:13-49
 	android:label
-		ADDED from /Users/sallychhuon/AndroidStudioProjects/WaterCup/app/src/main/AndroidManifest.xml:22:13-45
+		ADDED from /Users/sallychhuon/AndroidStudioProjects/WaterCup/app/src/main/AndroidManifest.xml:23:13-45
 	android:name
-		ADDED from /Users/sallychhuon/AndroidStudioProjects/WaterCup/app/src/main/AndroidManifest.xml:20:13-41
+		ADDED from /Users/sallychhuon/AndroidStudioProjects/WaterCup/app/src/main/AndroidManifest.xml:21:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /Users/sallychhuon/AndroidStudioProjects/WaterCup/app/src/main/AndroidManifest.xml:23:13-27:29
+ADDED from /Users/sallychhuon/AndroidStudioProjects/WaterCup/app/src/main/AndroidManifest.xml:24:13-28:29
 action#android.intent.action.MAIN
-ADDED from /Users/sallychhuon/AndroidStudioProjects/WaterCup/app/src/main/AndroidManifest.xml:24:17-69
+ADDED from /Users/sallychhuon/AndroidStudioProjects/WaterCup/app/src/main/AndroidManifest.xml:25:17-69
 	android:name
-		ADDED from /Users/sallychhuon/AndroidStudioProjects/WaterCup/app/src/main/AndroidManifest.xml:24:25-66
+		ADDED from /Users/sallychhuon/AndroidStudioProjects/WaterCup/app/src/main/AndroidManifest.xml:25:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/sallychhuon/AndroidStudioProjects/WaterCup/app/src/main/AndroidManifest.xml:26:17-77
+ADDED from /Users/sallychhuon/AndroidStudioProjects/WaterCup/app/src/main/AndroidManifest.xml:27:17-77
 	android:name
-		ADDED from /Users/sallychhuon/AndroidStudioProjects/WaterCup/app/src/main/AndroidManifest.xml:26:27-74
+		ADDED from /Users/sallychhuon/AndroidStudioProjects/WaterCup/app/src/main/AndroidManifest.xml:27:27-74
 activity#csc472.depaul.edu.watercup.Stats
-ADDED from /Users/sallychhuon/AndroidStudioProjects/WaterCup/app/src/main/AndroidManifest.xml:29:9-34:15
+ADDED from /Users/sallychhuon/AndroidStudioProjects/WaterCup/app/src/main/AndroidManifest.xml:30:9-35:15
 	android:screenOrientation
-		ADDED from /Users/sallychhuon/AndroidStudioProjects/WaterCup/app/src/main/AndroidManifest.xml:32:13-49
+		ADDED from /Users/sallychhuon/AndroidStudioProjects/WaterCup/app/src/main/AndroidManifest.xml:33:13-49
 	android:label
-		ADDED from /Users/sallychhuon/AndroidStudioProjects/WaterCup/app/src/main/AndroidManifest.xml:31:13-47
+		ADDED from /Users/sallychhuon/AndroidStudioProjects/WaterCup/app/src/main/AndroidManifest.xml:32:13-47
 	android:configChanges
-		ADDED from /Users/sallychhuon/AndroidStudioProjects/WaterCup/app/src/main/AndroidManifest.xml:33:13-63
+		ADDED from /Users/sallychhuon/AndroidStudioProjects/WaterCup/app/src/main/AndroidManifest.xml:34:13-63
 	android:name
-		ADDED from /Users/sallychhuon/AndroidStudioProjects/WaterCup/app/src/main/AndroidManifest.xml:30:13-34
+		ADDED from /Users/sallychhuon/AndroidStudioProjects/WaterCup/app/src/main/AndroidManifest.xml:31:13-34
 activity#csc472.depaul.edu.watercup.Alarms
-ADDED from /Users/sallychhuon/AndroidStudioProjects/WaterCup/app/src/main/AndroidManifest.xml:35:9-37:50
+ADDED from /Users/sallychhuon/AndroidStudioProjects/WaterCup/app/src/main/AndroidManifest.xml:36:9-38:50
 	android:label
-		ADDED from /Users/sallychhuon/AndroidStudioProjects/WaterCup/app/src/main/AndroidManifest.xml:37:13-47
+		ADDED from /Users/sallychhuon/AndroidStudioProjects/WaterCup/app/src/main/AndroidManifest.xml:38:13-47
 	android:name
-		ADDED from /Users/sallychhuon/AndroidStudioProjects/WaterCup/app/src/main/AndroidManifest.xml:36:13-35
+		ADDED from /Users/sallychhuon/AndroidStudioProjects/WaterCup/app/src/main/AndroidManifest.xml:37:13-35
 activity#csc472.depaul.edu.watercup.Settings
-ADDED from /Users/sallychhuon/AndroidStudioProjects/WaterCup/app/src/main/AndroidManifest.xml:38:9-40:53
+ADDED from /Users/sallychhuon/AndroidStudioProjects/WaterCup/app/src/main/AndroidManifest.xml:39:9-41:53
 	android:label
-		ADDED from /Users/sallychhuon/AndroidStudioProjects/WaterCup/app/src/main/AndroidManifest.xml:40:13-50
+		ADDED from /Users/sallychhuon/AndroidStudioProjects/WaterCup/app/src/main/AndroidManifest.xml:41:13-50
 	android:name
-		ADDED from /Users/sallychhuon/AndroidStudioProjects/WaterCup/app/src/main/AndroidManifest.xml:39:13-37
+		ADDED from /Users/sallychhuon/AndroidStudioProjects/WaterCup/app/src/main/AndroidManifest.xml:40:13-37
 uses-sdk
 INJECTED from /Users/sallychhuon/AndroidStudioProjects/WaterCup/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/sallychhuon/AndroidStudioProjects/WaterCup/app/src/main/AndroidManifest.xml

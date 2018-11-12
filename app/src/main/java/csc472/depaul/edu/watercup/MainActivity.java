@@ -112,7 +112,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
         if (currentFluidIntake < totalWater ) {
-            dialogString.setText("Keep it up! You've only drank " + currentFluidIntake+ "/" + totalWater + " fl. oz");
+            dialogString.setText("Keep it up! You've drank " + currentFluidIntake+ "/" + totalWater + " fl. oz");
         } else {
             dialogString.setText("You've reached your daily fluid intake! Good Job!");
         }
@@ -257,17 +257,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     public void updateWeather(String code, String temp, String descrip) {
-
-       /* SharedPreferences pref = getApplicationContext().getSharedPreferences("MyPref", MODE_PRIVATE);
-        SharedPreferences.Editor editor = pref.edit();
-
-        editor.putString("temp", temp);
-        editor.apply();
-        editor.putString("code", code);
-        editor.apply();
-        editor.putString("desrip", descrip);
-        editor.apply();
-        */
 
 
         TextView weatherDesc = findViewById(R.id.description);

@@ -28,7 +28,8 @@
                 android:id="@+id/linearLayout"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight=".30"
+                android:layout_weight=".40"
+                android:layout_margin="5dp"
                 android:orientation="horizontal"
                 android:weightSum="2"
 
@@ -43,7 +44,7 @@
                     android:layout_weight="1"
                     android:background="@drawable/sugarcup_button"
                     android:contentDescription="@string/sugarcup_descrip"
-                    android:padding="30dp"
+                    android:padding="45dp"
                     app:srcCompat="@drawable/drink" />
 
                 <ImageView
@@ -54,15 +55,20 @@
                     android:layout_weight="1"
                     android:background="@drawable/watercup_button"
                     android:contentDescription="@string/watercup_descrip"
-                    android:padding="30dp"
+                    android:padding="40dp"
                     app:srcCompat="@drawable/waterglass" />
             </LinearLayout>
 
             <include
                 layout="@layout/weather_ul"
+                android:layout_marginRight="9dp"
+                android:layout_marginLeft="9dp"
+                android:layout_marginBottom="9dp"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight=".30" />
+                android:layout_weight=".20"
+
+                />
 
 
             <LinearLayout
@@ -70,6 +76,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight=".40"
+                android:layout_marginRight="9dp"
+                android:layout_marginLeft="9dp"
                 android:background="@drawable/main_bottom_lay"
                 android:color="@color/colorSecondaryLight"
                 android:gravity="center"
@@ -79,7 +87,6 @@
 
 
                 <TextView
-
                     android:id="@+id/DialogString"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

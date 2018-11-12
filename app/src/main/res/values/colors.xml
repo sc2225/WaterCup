@@ -7,6 +7,11 @@
     <color name="colorSecondaryDark">#3f1dcb</color>
     <color name="colorSecondaryLight">#b47cff</color>
     <color name="transparent">#00000000</color>
+    <color name="transparent_50">#8FFF</color>
+    <color name="weather_bg_dark">#b0bec5</color>
+    <color name="weather_bg_light">#e2f1f8</color>
+
+
 
     <color name="bg_color">#fafafa</color>
     <color name="sugar_table">#ED7CF7</color>
