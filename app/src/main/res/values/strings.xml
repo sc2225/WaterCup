@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Your Water Cup</string>
+    <string name="app_name">WaterCup</string>
     <string name="stats_name">My Statistics</string>
     <string name="settings_name">My Profile</string>
     <string name="alarm_name">My Reminders</string>
@@ -27,8 +27,15 @@
 
     <string name="home_icon">&#xf015;</string>
     <string name="settingTitle">Configure Reminders</string>
+    <string name="weight_hint">Enter weight in pounds(lbs.)</string>
+    <string name="age_hint">Enter age in years</string>
+    <string name="water_achieve">You\'ve reached your daily fluid intake! Good Job!</string>
 
+    <string name="part1_dialog">Keep it up! You\'ve drank </string>
+    <string name="part2_dialog"> / </string>
+    <string name = "part3_dialog"> fl. oz </string>
 
+    <string name="water_dialog_notset">You have not specified a weight and/or age yet</string>
 
 
 

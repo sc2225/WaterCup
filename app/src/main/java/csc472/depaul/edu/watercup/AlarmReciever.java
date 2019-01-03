@@ -32,11 +32,8 @@ public class AlarmReciever extends BroadcastReceiver{
 
         NotificationManager notificationManager = context.getSystemService(NotificationManager.class);
 
-        if (Build.VERSION.SDK_INT < 16) {
-            notificationManager.notify(1, notification.getNotification());
-        } else {
             notificationManager.notify(1, notification.build());
-        }
+
     }
 
 

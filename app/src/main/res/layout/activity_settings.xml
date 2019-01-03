@@ -51,9 +51,9 @@
             android:layout_marginLeft="3dp"
             android:layout_marginRight="3dp"
             android:layout_marginBottom="15dp"
-            android:padding="15dp"
+            android:padding="14dp"
             android:ems="12"
-            android:hint="Enter weight in pounds(lbs.)"
+            android:hint="@string/weight_hint"
             android:inputType="number" />
 
         <EditText
@@ -64,9 +64,9 @@
             android:layout_marginLeft="3dp"
             android:layout_marginRight="3dp"
             android:layout_marginBottom="15dp"
-            android:padding="15dp"
+            android:padding="14dp"
             android:ems="12"
-            android:hint="Enter age in years"
+            android:hint="@string/age_hint"
             android:inputType="number"
             />
 
@@ -86,20 +86,11 @@
             android:autoSizeMinTextSize="11sp"
             android:autoSizeMaxTextSize="16sp"
             android:autoSizeStepGranularity="1sp"
-            android:text="TextView"
             android:layout_gravity="center"
             android:textAlignment="center" />
 
 
-
-
     </LinearLayout>
-
-
-
-
-
-
 
 
     <include

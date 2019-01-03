@@ -3,41 +3,25 @@ package csc472.depaul.edu.watercup;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Typeface;
-import android.os.AsyncTask;
-import android.preference.PreferenceManager;
-import android.support.v4.app.DialogFragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.NumberPicker;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import org.json.JSONObject;
-
 import java.util.Calendar;
 
 
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
-    private ImageView sugarCup;
-    private ImageView waterCup;
-    private ImageView alarmIc;
-    private ImageView settingsIc;
-    private ImageView statsIc;
     private ProgressBar progressBar;
     private TextView dialogString;
-    private SugarCounterDialog sugardialog;
-    private WaterCounterDialog waterdialog;
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.toolbar, menu);
         return true;
     }
 
@@ -60,17 +44,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Log.v("state:", "OnCreate");
 
         resetDailyConsumption();
-        SharedPreferences pref = getApplicationContext().getSharedPreferences("MyPref", MODE_PRIVATE);
 
         //initialize cups
-        sugarCup = (ImageView) findViewById(R.id.sugarCupId);
-        waterCup = (ImageView) findViewById(R.id.waterCupId);
-        alarmIc = (ImageView) findViewById(R.id.alarmIcon);
-        settingsIc = (ImageView) findViewById(R.id.settingsIcon);
-        statsIc = (ImageView) findViewById(R.id.statsIcon);
+        ImageView sugarCup = findViewById(R.id.sugarCupId);
+        ImageView waterCup = findViewById(R.id.waterCupId);
+        ImageView alarmIc = findViewById(R.id.alarmIcon);
+        ImageView settingsIc = findViewById(R.id.settingsIcon);
+        ImageView statsIc = findViewById(R.id.statsIcon);
         progressBar = findViewById(R.id.progressBar);
         dialogString = findViewById(R.id.DialogString);
 
@@ -112,16 +94,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
         if (currentFluidIntake < totalWater ) {
-            dialogString.setText("Keep it up! You've drank " + currentFluidIntake+ "/" + totalWater + " fl. oz");
+            String text = "Keep it up! You've drank " + currentFluidIntake + " / " + totalWater + " fl. oz";
+            dialogString.setText(text);
         } else {
-            dialogString.setText("You've reached your daily fluid intake! Good Job!");
+            dialogString.setText(R.string.water_achieve);
         }
     }
 
     private void resetDailyConsumption (){
-        //store current dat in SharedPreference. if "olddate" not in SharedPref, make this olddate AND currentDate
-        //compare old date and new date by if olddate == newdate. if a day has passed, store that passed day data in shared pref
-        //When 7 days have passed, restart over again
 
         SharedPreferences pref = getApplicationContext().getSharedPreferences("MyPref", MODE_PRIVATE);
         SharedPreferences.Editor editor = pref.edit();
@@ -202,7 +182,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
     public void showSugarNumberPicker(View view) {
-        sugardialog = new SugarCounterDialog();
+        SugarCounterDialog sugardialog = new SugarCounterDialog();
         sugardialog.setValueChangeListener(new NumberPicker.OnValueChangeListener() {
             @Override
             public void onValueChange(NumberPicker picker, int oldVal, int newVal) {
@@ -229,7 +209,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     public void showWaterNumberPicker (View view) {
-        waterdialog = new WaterCounterDialog();
+        WaterCounterDialog waterdialog = new WaterCounterDialog();
         waterdialog.setValueChangeListener(new NumberPicker.OnValueChangeListener() {
             @Override
             public void onValueChange(NumberPicker picker, int oldVal, int newVal) {
@@ -271,7 +251,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     public void getWeatherIcon(String code){
 
-        String icon = "";
+        String icon;
 
         Typeface weatherFont = Typeface.createFromAsset(getAssets(), "fonts/weather.ttf");
 
@@ -290,7 +270,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         } else if (code.startsWith("7")) {
             icon = getString(R.string.foggy_weather);
             //foggy
-        } else if (code == "800") {
+        } else if (code.equals("800")) {
             icon = getString(R.string.clear_weather);
             //clear
         } else if(code.startsWith("80") ) {
@@ -312,30 +292,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onPause() {
         super.onPause();
-        Log.v("state:", "OnPause");
-    }
-
-    @Override
-    protected void onStart() {
-        super.onStart();
-        Log.v("state:", "OnStart");
 
     }
+
 
     @Override
     protected void onResume() {
         super.onResume();
-        Log.v("state:", "OnResume");
-
-
 
     }
 
     @Override
     protected void onStop() {
         super.onStop();
-        Log.v("state:", "OnStop");
-
         Thread.currentThread().interrupt();
 
     }

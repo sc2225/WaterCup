@@ -35,19 +35,14 @@
             android:id="@+id/switchButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="12dp"
-            android:switchMinWidth="70dp"
+            android:layout_marginLeft="18dp"
+            android:switchMinWidth="50dp"
             android:switchPadding="5dp"
-            android:text="Turn Reminder On/Off"
-            android:trackTint="@color/colorSecondary" />
+            android:text="Turn Reminder On/Off" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:autoSizeMaxTextSize="23sp"
-            android:autoSizeMinTextSize="17sp"
-            android:autoSizeStepGranularity="2sp"
-            android:autoSizeTextType="uniform"
             android:text="Set Alarm Interval"
             android:layout_gravity="center"
             android:layout_margin="8dp"/>
@@ -59,36 +54,24 @@
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
             android:orientation="vertical">
-
-            <RadioButton
-                android:id="@+id/radio_half_hour"
+            <RadioButton android:id="@+id/radio_half_hour"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:buttonTint="@color/colorSecondary"
                 android:onClick="onRadioButtonClicked"
                 android:text="Every half-hour" />
-
-            <RadioButton
-                android:id="@+id/radio_per_day"
+            <RadioButton android:id="@+id/radio_per_day"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:buttonTint="@color/colorSecondary"
                 android:onClick="onRadioButtonClicked"
                 android:text="Once per day" />
-
-            <RadioButton
-                android:id="@+id/radio_every_other"
+            <RadioButton android:id="@+id/radio_every_other"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:buttonTint="@color/colorSecondary"
                 android:onClick="onRadioButtonClicked"
                 android:text="Once every other day" />
-
-            <RadioButton
-                android:id="@+id/radio_min"
+            <RadioButton android:id="@+id/radio_min"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:buttonTint="@color/colorSecondary"
                 android:onClick="onRadioButtonClicked"
                 android:text="Every minute" />
         </RadioGroup>

@@ -1,6 +1,5 @@
 package csc472.depaul.edu.watercup;
 
-import java.text.DecimalFormat;
 
 public class BaseAlgImpl implements WaterCalculation {
     @Override

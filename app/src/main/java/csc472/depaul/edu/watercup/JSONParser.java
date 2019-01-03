@@ -29,7 +29,6 @@ public class JSONParser {
 
             JSONObject jobj = new JSONObject(jo.toString());
 
-           // JSONObject jobj = new JSONObject(jo.toString());
 
             JSONObject main = jobj.getJSONObject("main");
             temp = main.getString("temp");
@@ -44,16 +43,13 @@ public class JSONParser {
                 desc = obj.getString("description");
             }
 
-            Log.v("run", Thread.currentThread().toString());
 
             Handler mainHandler = new Handler(Looper.getMainLooper());
 
             Runnable myRunnable = new Runnable() {
                 @Override
                 public void run() {
-                    Log.v("run", Thread.currentThread().toString());
 
-                    System.out.println("This is temp: " + temp + " this is desc: " + desc + " this is code: " + code);
 
                     if (code == null || temp == null|| desc == null ) {
                         temp = "N/A";
@@ -62,13 +58,7 @@ public class JSONParser {
 
                     }
 
-                    if (activity==null)  {
-                        System.out.println("ACTIVITY IS NULLLLL");
-                    }
-
                     activity.updateWeather(code, temp, desc );
-
-
 
                 }
             };
@@ -88,9 +78,8 @@ public class JSONParser {
 
        //convert back to string
         Double resultFahr = Double.parseDouble(String.format("%.1f", fahr));
-        String b = resultFahr.toString();
+        return resultFahr.toString();
 
-        return b;
     }
 
     public static void setActivity(MainActivity act) {

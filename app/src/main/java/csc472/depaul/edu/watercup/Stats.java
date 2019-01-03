@@ -19,19 +19,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Stats extends AppCompatActivity implements View.OnClickListener {
-    private ImageView alarmIc;
-    private ImageView settingsIc;
-    private ImageView statsIc;
-    private ImageView homeIc;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_stats);
 
-        alarmIc = (ImageView) findViewById(R.id.alarmIcon);
-        settingsIc = (ImageView) findViewById(R.id.settingsIcon);
-        statsIc = (ImageView) findViewById(R.id.statsIcon);
-        homeIc = findViewById(R.id.homeIcon);
+        ImageView alarmIc = findViewById(R.id.alarmIcon);
+        ImageView settingsIc = findViewById(R.id.settingsIcon);
+        ImageView statsIc = findViewById(R.id.statsIcon);
+        ImageView homeIc = findViewById(R.id.homeIcon);
 
         alarmIc.setOnClickListener(this);
         settingsIc.setOnClickListener(this);

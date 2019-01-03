@@ -49,10 +49,6 @@ public class SugarCounterDialog extends DialogFragment{
 
         }
 
-        public NumberPicker.OnValueChangeListener getValueChangeListener() {
-            return valueChangeListener;
-        }
-
         public void setValueChangeListener(NumberPicker.OnValueChangeListener valueChangeListener) {
             this.valueChangeListener = valueChangeListener;
         }

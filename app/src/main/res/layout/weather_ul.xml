@@ -38,7 +38,7 @@
             android:autoSizeMinTextSize="18sp"
             android:autoSizeStepGranularity="4sp"
             android:autoSizeTextType="uniform"
-            android:paddingStart="3dp"
+            android:paddingStart="5dp"
             android:text="@string/weather_icon_default"
             android:textAlignment="textStart"
 
@@ -56,7 +56,7 @@
         android:autoSizeMinTextSize="16sp"
         android:autoSizeStepGranularity="2sp"
         android:autoSizeTextType="uniform"
-        android:fontFamily="sans-serif"
+        android:fontFamily="monospace"
         android:text="@string/weather_desc_default"
         android:textAlignment="center" />
 </RelativeLayout>

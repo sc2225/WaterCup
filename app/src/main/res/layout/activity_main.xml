@@ -35,28 +35,54 @@
 
                 >
 
-                <ImageView
-
-                    android:id="@+id/sugarCupId"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="4dp"
+                <FrameLayout
+                    android:id="@+id/waterFrame"
                     android:layout_weight="1"
-                    android:background="@drawable/sugarcup_button"
-                    android:contentDescription="@string/sugarcup_descrip"
-                    android:padding="45dp"
-                    app:srcCompat="@drawable/drink" />
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
 
-                <ImageView
-                    android:id="@+id/waterCupId"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="4dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/watercup_button"
-                    android:contentDescription="@string/watercup_descrip"
-                    android:padding="40dp"
-                    app:srcCompat="@drawable/waterglass" />
+                    <ImageView
+
+                        android:id="@+id/sugarCupId"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="4dp"
+
+                        android:background="@drawable/sugarcup_button"
+                        android:contentDescription="@string/sugarcup_descrip"
+                        android:padding="45dp"
+                        app:srcCompat="@drawable/drink" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|right"
+                        app:srcCompat="@drawable/plus"/>
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/waterCupId"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="4dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/watercup_button"
+                        android:contentDescription="@string/watercup_descrip"
+                        android:padding="40dp"
+                        app:srcCompat="@drawable/waterglass" />
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|right"
+                        app:srcCompat="@drawable/plus"/>
+                </FrameLayout>
+
             </LinearLayout>
 
             <include
@@ -91,9 +117,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
+                    android:fontFamily="sans-serif"
                     android:padding="15dp"
                     android:text="Keep it up!"
                     android:textAlignment="center"
+                    android:textColor="@android:color/black"
                     android:textSize="19sp" />
 
                 <ProgressBar

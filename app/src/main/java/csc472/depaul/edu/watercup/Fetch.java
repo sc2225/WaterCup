@@ -54,7 +54,6 @@ public class Fetch extends AsyncTask<Void, Void, Void> {
 
             location.endUpdates();
 
-            //URL url = new URL("http://api.openweathermap.org/data/2.5/weather?q=" + city + "&APPID=412e1164d49908e6ecaa1b64520addf4");
             URL url = new URL("http://api.openweathermap.org/data/2.5/weather?lat=" + latitude + "&lon=" + longitude + "&APPID=412e1164d49908e6ecaa1b64520addf4");
 
 

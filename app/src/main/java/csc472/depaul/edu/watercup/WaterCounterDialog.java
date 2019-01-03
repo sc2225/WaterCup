@@ -51,10 +51,6 @@ public class WaterCounterDialog extends DialogFragment {
 
     }
 
-    public NumberPicker.OnValueChangeListener getValueChangeListener() {
-        return valueChangeListener;
-    }
-
     public void setValueChangeListener(NumberPicker.OnValueChangeListener valueChangeListener) {
         this.valueChangeListener = valueChangeListener;
     }
