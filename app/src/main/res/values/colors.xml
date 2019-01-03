@@ -1,13 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#71cbf4</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorPrimary">#4fc2f7</color>
+    <color name="colorPrimaryDark">#0092c4</color>
+    <color name="colorPrimaryLight">#8bf5ff</color>
+    <color name="colorSecondary">#7c4dff</color>
+    <color name="colorSecondaryDark">#3f1dcb</color>
+    <color name="colorSecondaryLight">#b47cff</color>
+    <color name="transparent">#00000000</color>
+    <color name="transparent_50">#8FFF</color>
+    <color name="weather_bg_dark">#b0bec5</color>
+    <color name="weather_bg_light">#e2f1f8</color>
 
-    <color name="bg_color">#CBF3F5</color>
+
+
+    <color name="bg_color">#fafafa</color>
     <color name="sugar_table">#ED7CF7</color>
     <color name="water_table">#3DE6FC</color>
     <color name="toolbar_color">#32A7F0</color>
+    <color name="pink_accent">#ec407a</color>
     
     
 

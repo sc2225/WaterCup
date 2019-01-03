@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/base"
+    android:background="@drawable/gradient_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/mainLinear"
+            android:orientation="vertical"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_centerInParent="true"
+            android:gravity="center">
+
+
+            <TextView
+                android:id="@+id/waterView"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_marginBottom="4dp"
+                android:autoSizeMaxTextSize="21sp"
+                android:autoSizeMinTextSize="14sp"
+                android:autoSizeStepGranularity="2sp"
+                android:autoSizeTextType="uniform"
+                android:fontFamily="serif"
+                android:textAlignment="center"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/editText"
+                android:background="@drawable/shape_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:layout_marginBottom="15dp"
+                android:padding="10dp"
+                android:ems="12"
+                android:hint="Enter weight in pounds(lbs.)"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/editAge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_input"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:layout_marginBottom="15dp"
+                android:padding="10dp"
+                android:ems="12"
+                android:hint="Enter age in years"
+                android:inputType="number"
+                />
+
+            <Button
+                android:id="@+id/submit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shapesubmit"
+                android:fontFamily="sans-serif"
+                android:text="@string/submit_button" />
+
+            <TextView
+                android:id="@+id/textWeight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autoSizeTextType="uniform"
+                android:autoSizeMinTextSize="11sp"
+                android:autoSizeMaxTextSize="16sp"
+                android:autoSizeStepGranularity="1sp"
+                android:text="TextView"
+                android:layout_gravity="center"
+                android:textAlignment="center" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+    <TextView
+        android:id="@+id/logo"
+        android:layout_above="@id/nav_bar"
+        android:textColor="@color/colorPrimaryLight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="40sp"
+        android:padding="3dp"
+        />
+
+    <include
+        android:id="@+id/nav_bar"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content"
+        layout="@layout/bottom_nav" />
+
+
+</RelativeLayout>

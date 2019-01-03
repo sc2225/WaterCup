@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Your Water Cup</string>
+    <string name="app_name">WaterCup</string>
     <string name="stats_name">My Statistics</string>
     <string name="settings_name">My Profile</string>
     <string name="alarm_name">My Reminders</string>
@@ -7,6 +7,38 @@
     <string name="action_settings">Settings</string>
     <string name="title_activity_main2">Main2Activity</string>
     <string name="title_home">Home</string>
+    <string name="open_weather_maps_app_id">412e1164d49908e6ecaa1b64520addf4</string>
+
+    <string name= "cloudy_weather">&#xf013;</string>
+    <string name= "thunder_weather">&#xf01e;</string>
+    <string name="drizzle_weather">&#xf01c;</string>
+    <string name="rainy_weather">&#xf01a;</string>
+    <string name="snowy_weather">&#xf01b;</string>
+    <string name="clear_weather">&#xf00d;</string>
+    <string name="foggy_weather">&#xf014;</string>
+    <string name="submit_button">SUBMIT</string>
+    <string name="waterdrop">&#xf043;</string>
+    <string name="sugarcup_descrip">Sugar cup button</string>
+    <string name = "watercup_descrip">Water cup button</string>
+
+    <string name="weather_temp_default">N/A</string>
+    <string name="weather_icon_default">N/A</string>
+    <string name="weather_desc_default">Unable to fetch weather data at this time</string>
+
+    <string name="home_icon">&#xf015;</string>
+    <string name="settingTitle">Configure Reminders</string>
+    <string name="weight_hint">Enter weight in pounds(lbs.)</string>
+    <string name="age_hint">Enter age in years</string>
+    <string name="water_achieve">You\'ve reached your daily fluid intake! Good Job!</string>
+
+    <string name="part1_dialog">Keep it up! You\'ve drank </string>
+    <string name="part2_dialog"> / </string>
+    <string name = "part3_dialog"> fl. oz </string>
+
+    <string name="water_dialog_notset">You have not specified a weight and/or age yet</string>
+
+
+
 
 
 </resources>

@@ -1,102 +1,155 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/base"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/bg_color"
-    tools:context=".MainActivity">
+    android:fitsSystemWindows="true"
+    app:layout_constraintTop_toBottomOf="parent">
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="8dp"
+        android:fillViewport="true"
+        android:paddingBottom="?attr/actionBarSize"
+
+        >
+
+        <LinearLayout
+            android:id="@+id/mainLinear"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="1">
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight=".40"
+                android:layout_margin="5dp"
+                android:orientation="horizontal"
+                android:weightSum="2"
+
+                >
+
+                <FrameLayout
+                    android:id="@+id/waterFrame"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+
+                        android:id="@+id/sugarCupId"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="4dp"
+
+                        android:background="@drawable/sugarcup_button"
+                        android:contentDescription="@string/sugarcup_descrip"
+                        android:padding="45dp"
+                        app:srcCompat="@drawable/drink" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|right"
+                        app:srcCompat="@drawable/plus"/>
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/waterCupId"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="4dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/watercup_button"
+                        android:contentDescription="@string/watercup_descrip"
+                        android:padding="40dp"
+                        app:srcCompat="@drawable/waterglass" />
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|right"
+                        app:srcCompat="@drawable/plus"/>
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <include
+                layout="@layout/weather_ul"
+                android:layout_marginRight="9dp"
+                android:layout_marginLeft="9dp"
+                android:layout_marginBottom="9dp"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight=".20"
+
+                />
 
 
-    <ProgressBar
-        android:id="@+id/progressBar"
-        style="@android:style/Widget.ProgressBar.Horizontal"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="64dp"
-        android:layout_marginTop="77dp"
-        android:max="100"
-        android:progress="40"
-        android:progressDrawable="@drawable/progress_bar"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+            <LinearLayout
+                android:id="@+id/BottomLay"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight=".40"
+                android:layout_marginRight="9dp"
+                android:layout_marginLeft="9dp"
+                android:background="@drawable/main_bottom_lay"
+                android:color="@color/colorSecondaryLight"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingBottom="60dp"
+                android:weightSum="2">
 
 
-    <Switch
-        android:id="@+id/switch1"
-        android:layout_width="170dp"
-        android:layout_height="0dp"
-        android:layout_marginEnd="131dp"
-        android:layout_marginStart="83dp"
-        android:layout_marginTop="364dp"
-        android:checked="false"
-        android:splitTrack="false"
-        android:switchMinWidth="100dp"
-        android:switchPadding="10dp"
+                <TextView
+                    android:id="@+id/DialogString"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="sans-serif"
+                    android:padding="15dp"
+                    android:text="Keep it up!"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/black"
+                    android:textSize="19sp" />
 
-        android:switchTextAppearance="@style/TextAppearance.AppCompat"
-        android:text="Activity mode"
-        android:textAlignment="center"
-        android:textAppearance="@android:style/TextAppearance.WindowTitle"
-        android:textSize="12sp"
-        android:typeface="normal"
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    style="@android:style/Widget.ProgressBar.Horizontal"
+                    android:layout_width="250dp"
+                    android:layout_height="18dp"
+                    android:layout_marginTop="8dp"
 
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:checked="false" />
+                    android:progressDrawable="@drawable/progress_bar" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
 
     <include
-        android:id="@+id/include"
-        layout="@layout/bottom_nav" />
-
-    <LinearLayout
-        android:id="@+id/linearLayout"
+        android:id="@+id/nav_bar"
+        layout="@layout/bottom_nav"
         android:layout_width="match_parent"
-        android:layout_height="111dp"
-        android:layout_marginTop="124dp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <ImageView
-            android:id="@+id/sugarCupId"
-            android:layout_width="109dp"
-            android:layout_height="100dp"
-            android:layout_weight="1"
-            android:contentDescription="Sugary Drinks Button"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/drink" />
-
-        <ImageView
-            android:id="@+id/waterCupId"
-            android:layout_width="106dp"
-            android:layout_height="100dp"
-            android:layout_weight="1"
-            android:contentDescription="Water Button"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/waterglass" />
-    </LinearLayout>
-
-    <TextView
-        android:id="@+id/DialogString"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="16dp"
-        android:text="Keep it up!"
-        app:layout_constraintBottom_toTopOf="@+id/progressBar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintBottom_toBottomOf="@id/base"
+
+        />
+
 
 
 </android.support.constraint.ConstraintLayout>
+
+    <!--app:layout_constraintBottom_toTopOf="@+id/nav_bar"-->

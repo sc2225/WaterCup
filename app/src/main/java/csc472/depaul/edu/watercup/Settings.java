@@ -3,6 +3,7 @@ package csc472.depaul.edu.watercup;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -14,18 +15,12 @@ import android.widget.Toast;
 
 public class Settings extends AppCompatActivity implements View.OnClickListener {
 
-    private ImageView alarmIc;
-    private ImageView settingsIc;
-    private ImageView statsIc;
-    private ImageView homeIc;
-    private Button submit;
     private EditText weightInput;
     private TextView weightView;
     private EditText ageInput;
     SharedPreferences.Editor editor;
     SharedPreferences pref;
     private TextView waterView;
-
 
 
     @Override
@@ -38,15 +33,17 @@ public class Settings extends AppCompatActivity implements View.OnClickListener 
         editor = pref.edit();
 
 
-        alarmIc= (ImageView) findViewById(R.id.alarmIcon);
-        settingsIc = (ImageView) findViewById(R.id.settingsIcon);
-        statsIc = (ImageView) findViewById(R.id.statsIcon);
-        homeIc = findViewById(R.id.homeIcon);
-        submit = (Button) findViewById(R.id.submit);
-        weightView = (TextView) findViewById(R.id.textWeight) ;
-        weightInput = (EditText) findViewById(R.id.editText);
-        ageInput = (EditText) findViewById(R.id.editAge);
-        waterView = (TextView) findViewById(R.id.waterView);
+        ImageView alarmIc = findViewById(R.id.alarmIcon);
+        ImageView settingsIc = findViewById(R.id.settingsIcon);
+        ImageView statsIc = findViewById(R.id.statsIcon);
+        ImageView homeIc = findViewById(R.id.homeIcon);
+        Button submit = findViewById(R.id.submit);
+        weightView = findViewById(R.id.textWeight) ;
+        weightInput = findViewById(R.id.editText);
+        ageInput = findViewById(R.id.editAge);
+        waterView = findViewById(R.id.waterView);
+        TextView logo = findViewById(R.id.logo);
+
 
         alarmIc.setOnClickListener(this);
         settingsIc.setOnClickListener(this);
@@ -54,17 +51,28 @@ public class Settings extends AppCompatActivity implements View.OnClickListener 
         submit.setOnClickListener(this);
         homeIc.setOnClickListener(this);
 
+        //set the main logo
+        Typeface weatherFont = Typeface.createFromAsset(getAssets(), "fonts/fontawesome-webfont.ttf");
+        logo.setText(getString(R.string.waterdrop));
+        logo.setTypeface(weatherFont);
+
+
     }
 
     @Override
-    protected void onPostResume() {
-        super.onPostResume();
+    protected void onResume() {
+        super.onResume();
         //if not sharedPreferences for weight not null, populate the text view.
         if (pref.contains("weight") && pref.contains("age")) {
-            weightView.setText("Your weight and age are set as " + Integer.toString(pref.getInt("weight", 0)) + " lbs, " + Integer.toString(pref.getInt("age", 0)) + " years old." );
-            waterView.setText( pref.getInt("baseWater", 0)+ " oz.");
+
+            String dialog = "weight and age set as " + Integer.toString(pref.getInt("weight", 0)) + " lbs., " + Integer.toString(pref.getInt("age", 0)) + " years old";
+            weightView.setText(dialog);
+
+
+            String drinkDialog = "You need to drink " + pref.getInt("baseWater", 0)+ " fl. oz.";
+            waterView.setText(drinkDialog);
         } else {
-            weightView.setText("You have not specified a weight and/or age yet.");
+            weightView.setText(R.string.water_dialog_notset);
         }
     }
 
@@ -88,7 +96,6 @@ public class Settings extends AppCompatActivity implements View.OnClickListener 
                     Toast.makeText(this, "Please enter a valid value for age and weight", Toast.LENGTH_SHORT).show();
                 } else {
 
-                   // SharedData.getInstance().setWeight(Integer.parseInt(weightInput.getText().toString()));
                     editor.putInt("weight", Integer.parseInt(weightInput.getText().toString()) );
                     editor.apply();
 
@@ -97,10 +104,12 @@ public class Settings extends AppCompatActivity implements View.OnClickListener 
 
                     int weight = pref.getInt("weight", 0);
                     int age = pref.getInt("age", 0);
-                    weightView.setText("You have set your weight to " +Integer.toString(weight) + " and age to " + age);
+                    String weightSet ="You have set your weight to " +Integer.toString(weight) + " and age to " + age;
+                    weightView.setText(weightSet);
                     editor.putInt("baseWater", SharedData.getInstance().getDailyWater(weight, age) );
                     editor.apply();
-                    waterView.setText( pref.getInt("baseWater", 0)+ " oz.");
+                    String waterReq ="Daily Requirement: "+ pref.getInt("baseWater", 0)+ " fl. oz.";
+                    waterView.setText(waterReq);
 
                     break;
                 }

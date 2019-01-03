@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center"
+    android:background="@drawable/weather"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/Temp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="1dp"
+            android:layout_weight="1"
+            android:autoSizeMaxTextSize="28sp"
+            android:autoSizeMinTextSize="18sp"
+            android:autoSizeStepGranularity="4sp"
+            android:autoSizeTextType="uniform"
+            android:fontFamily="monospace"
+            android:text="@string/weather_temp_default"
+            android:textAlignment="textEnd"
+            android:textColor="@android:color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/weatherIcon"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:autoSizeMaxTextSize="28sp"
+            android:autoSizeMinTextSize="18sp"
+            android:autoSizeStepGranularity="4sp"
+            android:autoSizeTextType="uniform"
+            android:paddingStart="5dp"
+            android:text="@string/weather_icon_default"
+            android:textAlignment="textStart"
+
+            android:textColor="@android:color/black" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linear"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:autoSizeMaxTextSize="18sp"
+        android:autoSizeMinTextSize="16sp"
+        android:autoSizeStepGranularity="2sp"
+        android:autoSizeTextType="uniform"
+        android:fontFamily="monospace"
+        android:text="@string/weather_desc_default"
+        android:textAlignment="center" />
+</RelativeLayout>

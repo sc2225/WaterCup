@@ -1,114 +1,104 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/base"
+    android:background="@drawable/gradient_bg"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Settings">
+    >
 
     <TextView
-        android:id="@+id/dialogView"
-        android:layout_width="wrap_content"
+        android:id="@+id/logo"
+        android:textColor="@color/colorPrimaryLight"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="60dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="The current amount you must drink daily: "
         android:textAlignment="center"
-        android:textSize="17dp"
-        app:layout_constraintBottom_toTopOf="@+id/waterView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_above="@id/mainLinear"
+        android:textSize="52sp"
 
-    <android.support.v7.widget.CardView
-        android:id="@+id/cardView"
-        android:layout_width="304dp"
-        android:layout_height="258dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        />
+
+    <LinearLayout
+        android:id="@+id/mainLinear"
+        android:orientation="vertical"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_centerInParent="true"
+        android:gravity="center">
 
 
-        <LinearLayout
+        <TextView
+            android:id="@+id/waterView"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:paddingLeft="16dp"
-            android:paddingRight="16dp"
-            tools:layout_editor_absoluteX="114dp"
-            tools:layout_editor_absoluteY="257dp">
+            android:layout_height="25dp"
+            android:layout_marginBottom="4dp"
+            android:autoSizeMaxTextSize="21sp"
+            android:autoSizeMinTextSize="14sp"
+            android:autoSizeStepGranularity="2sp"
+            android:autoSizeTextType="uniform"
+            android:fontFamily="serif"
+            android:textAlignment="center"
+            android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/textWeight"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_marginBottom="10dp"
-                android:padding="3dp"
-                android:text="TextView"
-                android:textAlignment="center" />
+        <EditText
+            android:id="@+id/editText"
+            android:background="@drawable/shape_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:layout_marginBottom="15dp"
+            android:padding="14dp"
+            android:ems="12"
+            android:hint="@string/weight_hint"
+            android:inputType="number" />
 
-            <EditText
-                android:id="@+id/editText"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginBottom="10dp"
-                android:ems="10"
-                android:hint="Enter weight in pounds(lbs.)"
-                android:inputType="number"
+        <EditText
+            android:id="@+id/editAge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_input"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:layout_marginBottom="15dp"
+            android:padding="14dp"
+            android:ems="12"
+            android:hint="@string/age_hint"
+            android:inputType="number"
+            />
 
-                />
+        <Button
+            android:id="@+id/submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shapesubmit"
+            android:fontFamily="sans-serif"
+            android:text="@string/submit_button" />
 
-            <EditText
-                android:id="@+id/editAge"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginBottom="10dp"
-                android:ems="10"
-                android:hint="Enter age in years"
-                android:inputType="number"
-                tools:layout_editor_absoluteX="72dp"
-                tools:layout_editor_absoluteY="185dp" />
-
-            <Button
-                android:id="@+id/submit"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/shapesubmit"
-                android:text="SUBMIT" />
-
-        </LinearLayout>
+        <TextView
+            android:id="@+id/textWeight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autoSizeTextType="uniform"
+            android:autoSizeMinTextSize="11sp"
+            android:autoSizeMaxTextSize="16sp"
+            android:autoSizeStepGranularity="1sp"
+            android:layout_gravity="center"
+            android:textAlignment="center" />
 
 
-    </android.support.v7.widget.CardView>
+    </LinearLayout>
+
 
     <include
-        android:id="@+id/include2"
-        layout="@layout/bottom_nav"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/waterView"
-        android:layout_width="168dp"
-        android:layout_height="34dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="10dp"
-        android:textAlignment="center"
-        android:textSize="23dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dialogView" />
+        android:id="@+id/nav_bar"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content"
+        layout="@layout/bottom_nav" />
 
 
-</android.support.constraint.ConstraintLayout>
+</RelativeLayout>

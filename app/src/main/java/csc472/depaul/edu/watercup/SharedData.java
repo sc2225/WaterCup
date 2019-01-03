@@ -3,7 +3,7 @@ package csc472.depaul.edu.watercup;
 public class SharedData {
 
     private static SharedData instance;
-    private static int dailyWater;
+    private static String temp;
 
     private SharedData () {}
 
@@ -17,7 +17,21 @@ public class SharedData {
     //getters and setters
     public static int getDailyWater (int weight, int age) {
         Calculations calc = new Calculations();
-        dailyWater = calc.baseWater(weight, age);
+        int dailyWater = calc.baseWater(weight, age);
         return dailyWater;
     }
+
+    public static void setTemp(String temperature) {
+        temp = temperature;
+
+    }
+
+
+
+    public static String getTemp() {
+        return  temp;
+    }
+
+
+
 }

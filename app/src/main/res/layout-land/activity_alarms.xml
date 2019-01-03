@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Alarms"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:orientation="vertical"
+        android:baselineAligned="false"
+        >
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:height="27dp"
+            android:layout_margin="8dp"
+            android:autoSizeMaxTextSize="26sp"
+            android:autoSizeMinTextSize="20sp"
+            android:autoSizeStepGranularity="2sp"
+            android:autoSizeTextType="uniform"
+            android:text="@string/settingTitle"
+            android:baselineAligned="false"
+            android:textAlignment="center" />
+
+
+        <Switch
+            android:id="@+id/switchButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:switchMinWidth="50dp"
+            android:switchPadding="5dp"
+            android:text="Turn Reminder On/Off" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Set Alarm Interval"
+            android:layout_gravity="center"
+            android:layout_margin="8dp"/>
+
+
+        <RadioGroup
+            android:id="@+id/radio_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:orientation="vertical">
+            <RadioButton android:id="@+id/radio_half_hour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onRadioButtonClicked"
+                android:text="Every half-hour" />
+            <RadioButton android:id="@+id/radio_per_day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onRadioButtonClicked"
+                android:text="Once per day" />
+            <RadioButton android:id="@+id/radio_every_other"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onRadioButtonClicked"
+                android:text="Once every other day" />
+            <RadioButton android:id="@+id/radio_min"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onRadioButtonClicked"
+                android:text="Every minute" />
+        </RadioGroup>
+
+
+    </LinearLayout>
+
+    <include layout="@layout/bottom_nav"/>
+
+
+
+</RelativeLayout>
+
