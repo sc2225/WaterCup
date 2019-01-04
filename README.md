@@ -15,8 +15,8 @@ Watercup is a basic fluid consumption tracker that allows users to keep track of
 
 <b>What I would like to change/do differently in future</b>: 
 <ul>
-	<l>Change the usage of Async thread to a faster thread for better performance</l>
-	<l>Make the alarm reminder more configurable, such as being able to choose a custom date and time for a reminder to be pushed</l>
-	<l>Make the alarm reminder more accurate. Currently, the alarm reminder is not exact and rings at estimated intervals.
-	<l>Change the UI Design to be more interactive.</l>
+	<li>Change the usage of Async thread to a faster thread for better performance</li>
+	<li>Make the alarm reminder more configurable, such as being able to choose a custom date and time for a reminder to be pushed</li>
+	<li>Make the alarm reminder more accurate. Currently, the alarm reminder is not exact and rings at estimated intervals.</li>
+	<li>Change the UI Design to be more interactive.</li>
 </ul>
